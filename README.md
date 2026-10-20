@@ -39,7 +39,17 @@ Traditional ACT-R models treat procedural matching and selection as discrete, bl
 ---
 
 ## 📁 Repository Structure
+```text
 
+├── docs  
+│    └── IMPLEMENTATIONS.md
+├── paper
+│    └── main.tex
+│  
+├── README.md
+└── LICENSE
+
+```
 
 ## Demonstration Repositories
 
