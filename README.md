@@ -55,10 +55,10 @@ Traditional ACT-R models treat procedural matching and selection as discrete, bl
 
 This project includes several standalone prototype repositories that demonstrate specific subsystems of Micro-ACT-R.
 
-- [input-parser](...)
-- [particle-encapsulation](...)
-- [topological-mapper](...)
-- [spatial-allocation](...)
+- [input-parser](https://github.com/ao-labs-123/input-parser)
+- [particle-encapsulation](https://github.com/ao-labs-123/particle-encapsulation)
+- [topological-mapper](https://github.com/ao-labs-123/topological-mapper)
+- [spatial-allocation](https://github.com/ao-labs-123/spatial-allocation)
 
 For detailed notes and usage, see [docs/IMPLEMENTATIONS.md](docs/IMPLEMENTATIONS.md).
 
