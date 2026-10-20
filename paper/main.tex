@@ -78,11 +78,83 @@ The final component of the architecture concerns the relationship between abstra
 Memory storage is therefore dual in nature: it contains explicit symbolic content and implicit geometric organization. Knowledge categories guide retrieval by defining the relevant region of the field, while the actual activation dynamics arise from the interaction among particles, nodes, and phase-coupled states. This duality allows the system to remain grounded in structured symbolic meaning while also supporting the dynamic, non-linear behavior necessary for flexible reasoning and self-correction.
 
 \section{Mathematical Formulation}
-% ここで数理的・物理的モデルをしっかり記述する
-% 4.1 Categorical Consistency (Functor mapping between Knowledge \& Memory)
-% 4.2 Potential Energy Function \& Relaxation Dynamics
-% 4.3 Quantum Entanglement \& Non-local Phase Synchronization
-% 4.4 Error Feedback \& Topological Deformation (Backtracking Mechanism)
+
+\subsection{Categorical Consistency}
+
+Let $\mathcal{K}$ denote the space of knowledge categories and $\mathcal{M}$ the space of memory states. Each concept $k \in \mathcal{K}$ is mapped to a memory representation $m \in \mathcal{M}$ through a structured encoding function
+\[
+F : \mathcal{K} \rightarrow \mathcal{M}.
+\]
+The mapping is assumed to preserve conceptual compatibility such that semantically related categories remain close in the memory manifold:
+\[
+d_{\mathcal{M}}(F(k_i), F(k_j)) \leq \epsilon \; d_{\mathcal{K}}(k_i, k_j),
+\]
+where $d_{\mathcal{K}}$ and $d_{\mathcal{M}}$ are appropriate distance functions over the category space and memory space, respectively. This condition ensures that structural similarity in the knowledge layer is reflected in the geometry of the memory field.
+
+Let the active reasoning state be represented as a set of candidate memory vectors
+\[
+X = \{x_1, x_2, \ldots, x_n\}, \quad x_i \in \mathbb{R}^d.
+\]
+Each $x_i$ corresponds to a memory unit, a concept, or a candidate retrieval state. The architecture therefore treats memory not as a flat lookup table, but as a structured topological manifold whose geometry encodes semantic relations.
+
+\subsection{Potential Energy and Relaxation Dynamics}
+
+Reasoning is modeled as an energy minimization process over the candidate state space. We define a total potential energy
+\[
+E(X) =
+\sum_{i=1}^{n} \alpha_i \|x_i - F(k_i)\|^2
++ \sum_{i<j} W_{ij}\,\psi(\|x_i - x_j\|)
++ \lambda \sum_{i=1}^{n} \rho(x_i),
+\]
+where:
+- $\alpha_i$ weights the fidelity of each candidate state to its associated concept,
+- $W_{ij}$ represents relational compatibility or historical association,
+- $\psi(\cdot)$ is a distance-dependent interaction potential,
+- $\rho(\cdot)$ penalizes unstable or inconsistent states,
+- $\lambda$ controls the strength of regularization.
+
+The reasoning dynamics follow a relaxation process:
+\[
+\dot{x}_i = -\eta \frac{\partial E(X)}{\partial x_i},
+\]
+where $\eta > 0$ is the relaxation rate. In this formulation, inference corresponds to movement through the energy landscape until a local minimum is reached. Candidate states with low energy are favored, while conflicting alternatives are suppressed by energetic barriers.
+
+This makes the Match \& Select process explicit: selection does not occur as an opaque symbolic operation, but as convergence in a structured potential field.
+
+\subsection{Quantum-Inspired Phase Synchronization}
+
+To account for distributed coherence across candidate states, each memory element is assigned a phase variable $\theta_i \in [0, 2\pi)$. The phase-coupled interaction between two candidate states is governed by
+\[
+\Phi_{ij} = \gamma_{ij}\cos(\theta_i - \theta_j),
+\]
+where $\gamma_{ij}$ measures the strength of contextual alignment between $x_i$ and $x_j$. The total synchronization energy is then
+\[
+E_{\text{phase}}(X,\Theta)
+=
+- \sum_{i<j} \gamma_{ij}\cos(\theta_i - \theta_j).
+\]
+
+The phase dynamics are modeled by
+\[
+\dot{\theta}_i =
+\sum_{j \neq i} \gamma_{ij}\sin(\theta_j - \theta_i)
++ \delta_i,
+\]
+where $\delta_i$ represents local contextual bias. When phases become aligned, conceptually compatible states reinforce one another; when phases diverge, the corresponding candidates are weakened. This introduces a non-local coordination mechanism similar to quantum-inspired coherence without requiring an actual physical quantum computer.
+
+\subsection{Error Feedback and Topological Deformation}
+
+Reasoning is not assumed to be error-free. Let the discrepancy between a predicted and observed state be
+\[
+e_i = \|x_i - x_i^{\ast}\|,
+\]
+where $x_i^{\ast}$ denotes the target or expected representation under contextual constraints. The architecture updates the memory topology through a deformation term
+\[
+\Delta T = \sum_i \beta_i e_i \nabla_{x_i} \mathcal{R}(x_i),
+\]
+where $\mathcal{R}$ is a correction operator and $\beta_i$ controls the intensity of adaptation. This mechanism allows the system to backtrack, reweight, or locally reshape the memory field when the current representation fails to satisfy consistency conditions.
+
+As a result, the retrieval process is both adaptive and self-correcting: failed trajectories increase the effective energy of inconsistent states, inducing a topological reconfiguration that guides the system toward a more stable interpretation.
 
 \section{Reasoning and Self-Correction Dynamics}
 % 5.1 The Extended Match \& Select Mechanism
