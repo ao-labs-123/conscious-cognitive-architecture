@@ -40,9 +40,17 @@ Traditional ACT-R models treat procedural matching and selection as discrete, bl
 
 ## 📁 Repository Structure
 
-- `docs/`: Excalidraw architecture diagrams and design specs.
-- `paper/`: LaTeX source files (`main.tex`) for the theoretical specification paper.
-- `src/`: Python implementation of the node-based potential field engine.
+
+## Demonstration Repositories
+
+This project includes several standalone prototype repositories that demonstrate specific subsystems of Micro-ACT-R.
+
+- [input-parser](...)
+- [particle-encapsulation](...)
+- [topological-mapper](...)
+- [spatial-allocation](...)
+
+For detailed notes and usage, see [docs/IMPLEMENTATIONS.md](docs/IMPLEMENTATIONS.md).
 
 ---
 
