@@ -13,10 +13,17 @@
 Traditional cognitive architectures, such as ACT-R, rely heavily on discrete, linear production rules, treating the internal reasoning (Match \& Select) process as an opaque or instantaneous operation. This paper proposes \textbf{Micro-ACT-R}, a non-linear high-level cognitive architecture that deepens the reasoning pipeline into a continuous, physics-inspired potential field. By combining Category Theory, Topological Mapping, Quantization, and Quantum Entanglement, Micro-ACT-R enables dynamic, self-correcting cognitive loops (backtracking) without reset overhead. We present the theoretical framework, modular specifications, and mathematical formulations connecting memory categories with physical potential field relaxation.
 
 \section{Introduction}
-% 1.1 背景：認知アーキテクチャ（ACT-Rなど）の功績と限界
-% 1.2 課題：リニアなパイプラインにおける「推論（Match & Select）」のブラックボックス化とバックトラックの困難さ
-% 1.3 提案：Micro-ACT-Rの全体像（非線形・トポロジー的接続）
-% 1.4 本論文の貢献（Contributions）
+% 1.1 \section{Introduction}
+Traditional cognitive architectures, such as ACT-R, have provided a powerful account of human cognition by organizing reasoning as a sequence of production cycles. In such systems, working memory is matched against condition templates, a subset of productions is selected, and the corresponding actions are executed. This production-based framework has been highly influential because it captures symbolic reasoning in a compact and computationally efficient form.
+
+% 1.2 
+However, the Match and Select stages in conventional ACT-R-like systems are often treated as implicit, highly optimized operations. Although this design supports efficient execution, it also makes the underlying reasoning process difficult to inspect, explain, and systematically revise. When multiple candidate rules compete, when the selected production leads to a local dead end, or when the system must recover from semantic inconsistency, the decision process remains largely hidden behind rule-selection heuristics rather than an explicit inference mechanism.
+
+% 1.3 
+Micro-ACT-R addresses this limitation by reformulating reasoning as an explicit search over a structured topological potential landscape rather than as a black-box production selection problem. In our framework, memory items, rule candidates, and their compatibility relations are represented in a topological state space where conflict, alignment, and convergence are encoded as potential dynamics. The Match step is not merely a symbolic comparison over templates, but an evaluation of relative compatibility within this structured space; the Select step is not an opaque heuristic, but a controlled relaxation process over the field that yields the most coherent and stable candidate state. In this sense, reasoning becomes more traceable, more revisable, and more robust to local failures.
+
+% 1.4 
+The central contribution of this paper is therefore to move beyond the conventional ACT-R view of reasoning as discrete, linear production execution. We propose a non-linear cognitive architecture in which symbolic structure and topological dynamics are integrated, enabling explicit reasoning trajectories, conflict-aware selection, and principled backtracking. By making the inference process more explicit and controllable, Micro-ACT-R provides a foundation for more rigorous self-correction than traditional production-system architectures alone.
 
 \section{Related Work}
 % 2.1 ACT-R and Production Systems
