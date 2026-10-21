@@ -231,9 +231,68 @@ These differences are not merely representational; they alter the computational 
 Consequently, Micro-ACT-R reframes cognition as a distributed relaxation problem over memory topology rather than as a sequence of discrete production firings.
 
 \section{Implementation \& Complexity}
-% 6.1 Mapping Architecture to Graph-Based Code (Node/Edge Implementation)
-% 6.2 Expected Computational Complexity
-% 6.3 Future Directions (Hybrid Symbolic-Neural Integration)
+
+Micro-ACT-R can be implemented as a hybrid symbolic-graph system in which the control layer maintains explicit task symbols and category labels, while the topological layer maintains a weighted memory graph and continuous state vectors. This separation reflects the conceptual structure of the architecture and also yields a natural computational realization.
+
+\subsection{Mapping Architecture to Graph-Based Code}
+
+Let each memory item be represented as a node $v_i$ with an associated latent state $x_i \in \mathbb{R}^{d}$ and category label $k_i \in \mathcal{K}$. The relational structure is encoded in an adjacency matrix $W = [W_{ij}]$, where $W_{ij}$ measures semantic compatibility, historical association, or contextual relevance. Edges therefore encode not only similarity but also transition likelihood and retrieval strength. The control hub maintains the symbolic task context, while the graph layer performs retrieval and convergence.
+
+A minimal implementation can be organized as follows:
+\begin{itemize}
+    \item Node features: symbolic content, category assignment, activation value, and latent embedding.
+    \item Edge weights: semantic compatibility, co-occurrence frequency, or learned affinity.
+    \item State update: iterative gradient descent over the total energy $E(X,\Theta)$.
+    \item Phase update: synchronization dynamics over neighboring nodes.
+    \item Retrieval: selection of the stable candidate set with minimal energy and maximal phase coherence.
+\end{itemize}
+
+This design admits a direct computational interpretation. The topological field is a weighted graph $G=(V,E)$ with $|V|=n$ active memory elements and $|E|=m$ relations. Each node stores a latent representation, while the graph supports localized updates, neighbor access, and relational propagation. When a task begins, the system constructs or updates the active subgraph induced by semantic relevance and category alignment, and then performs iterative relaxation over this subgraph rather than over the entire memory store.
+
+\subsection{Expected Computational Complexity}
+
+Let $n$ denote the number of active candidate states, $m$ the number of relational edges in the active memory graph, $d$ the dimensionality of each latent embedding, and $T$ the number of relaxation steps. The dominant cost arises from pairwise interaction terms in the energy landscape and from phase synchronization across nodes.
+
+The cost of constructing the active memory graph is
+\[
+O(n^2)
+\]
+in the worst case when all candidate states are densely connected, and
+\[
+O(m)
+\]
+when the graph is sparse and only local neighborhoods are instantiated. Each relaxation step requires evaluating the energy and its gradient, which is dominated by pairwise compatibility terms and phase-coupled interactions:
+\[
+O(m + n d)
+\]
+for sparse graphs and
+\[
+O(n^2 d)
+\]
+for dense topological structures. The phase synchronization update similarly costs
+\[
+O(m)
+\]
+per iteration. Therefore, the total complexity over $T$ iterations is approximately
+\[
+O\bigl(T(m + n d)\bigr)
+\]
+for sparse implementations and
+\[
+O\bigl(T n^2 d\bigr)
+\]
+in the fully connected case. Memory usage is linear in the size of the graph and the latent representation:
+\[
+O(n d + m).
+\]
+
+This analysis shows that the architecture is computationally feasible in sparse or locally connected regimes, while dense topological fields can become expensive as the number of candidate states grows. In practice, efficiency can be improved through neighborhood pruning, category-based filtering, and sparse attention mechanisms that restrict updates to the most relevant memory subgraph.
+
+\subsection{Future Directions}
+
+A natural extension is the development of a hybrid symbolic-neural implementation in which the topological layer is learned from data while the control hub retains explicit symbolic constraints. In this setting, the graph adjacency weights can be inferred from semantic similarity or learned embeddings, while category supervision ensures that retrieval remains interpretable. Another promising direction is the use of sparse graph approximations, graph neural networks, or hierarchical memory maps to reduce the quadratic cost of dense candidate interactions.
+
+Such extensions would preserve the conceptual principles of Micro-ACT-R while making the model more scalable and deployment-ready. The combination of symbolic structure, topological reasoning, and learned relational weights suggests a promising path toward cognitively inspired but computationally efficient inference systems.
 
 \section{Experiments / Evaluation}
 
