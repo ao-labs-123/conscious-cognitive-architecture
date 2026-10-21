@@ -157,9 +157,76 @@ where $\mathcal{R}$ is a correction operator and $\beta_i$ controls the intensit
 As a result, the retrieval process is both adaptive and self-correcting: failed trajectories increase the effective energy of inconsistent states, inducing a topological reconfiguration that guides the system toward a more stable interpretation.
 
 \section{Reasoning \& Algorithms}
-% 5.1 The Extended Match \& Select Mechanism
-% 5.2 Loop Stabilization and Potential Convergence
-% 5.3 Comparison with Classical Production Rule Matching
+
+Micro-ACT-R does not model inference as a single symbolic production firing event. Instead, reasoning is formulated as an explicit search over a structured memory field in which candidate states are iteratively adjusted until they settle into a coherent, low-energy configuration. The central algorithmic idea is therefore to replace the opaque Match \& Select operation of classical ACT-R-like systems with a differentiable, topological relaxation process.
+
+\subsection{Extended Match \& Select Mechanism}
+
+Let the current task context be represented by a set of sensory observations and memory fragments $C = \{c_1, \dots, c_m\}$. Each fragment is first encoded as a particle-like representation and mapped into a candidate state space $X = \{x_1, \dots, x_n\}$, where each $x_i \in \mathbb{R}^d$ denotes a candidate memory node or retrieval state. Rather than matching a fixed rule against working memory, Micro-ACT-R constructs a topological field in which candidate states are positioned according to semantic similarity, historical compatibility, and contextual relevance.
+
+The Match step is therefore not a discrete rule lookup but a geometric assignment:
+\[
+x_i \leftarrow \mathrm{Embed}(c_i, \mathcal{G}),
+\]
+where $\mathcal{G}$ denotes the current memory graph and its relational structure. Candidate memory states are then evaluated by a composite energy function
+\[
+E(X,\Theta) = E_{\mathrm{mem}}(X) + E_{\mathrm{rel}}(X) + E_{\mathrm{phase}}(X,\Theta) + E_{\mathrm{reg}}(X),
+\]
+where $E_{\mathrm{mem}}$ penalizes mismatch with category-conditioned memory targets, $E_{\mathrm{rel}}$ captures relational compatibility among neighboring states, $E_{\mathrm{phase}}$ evaluates phase coherence across candidate elements, and $E_{\mathrm{reg}}$ prevents unstable or over-activated states from dominating the field.
+
+The Select step is implemented as a convergence process:
+\[
+\dot{x}_i = -\eta \frac{\partial E(X,\Theta)}{\partial x_i},
+\qquad
+\dot{\theta}_i =
+\sum_{j \neq i} \gamma_{ij}\sin(\theta_j - \theta_i) + \delta_i.
+\]
+The selected state is the candidate that remains stable after the field relaxes to a local minimum. In this sense, selection is not a binary symbolic operation but a dynamical outcome of energy minimization and phase coherence.
+
+\subsection{Loop Stabilization and Potential Convergence}
+
+Inference in Micro-ACT-R proceeds in iterative cycles. At each cycle, the architecture performs the following sequence:
+
+1. Encode the task context and active memory fragments.
+2. Construct or update the topological memory graph.
+3. Quantize candidate states into representational units.
+4. Initialize phase variables for each candidate.
+5. Compute the total energy and its gradients.
+6. Update the candidate positions and phases until convergence.
+7. Extract the dominant stable candidate set or retrieval region.
+
+This loop can be expressed as:
+\[
+X^{(t+1)} = X^{(t)} - \eta \nabla_X E(X^{(t)},\Theta^{(t)}),
+\]
+\[
+\Theta^{(t+1)} = \Theta^{(t)} + \tau \,\mathcal{S}(\Theta^{(t)},\Gamma),
+\]
+where $\mathcal{S}$ denotes the phase synchronization operator. The process terminates when the energy decrease falls below a threshold, when the phase alignment stabilizes, or when the candidate set converges to a fixed attractor basin.
+
+This stabilization mechanism is essential for preventing oscillatory reasoning. Without it, topological updates could continuously reconfigure the field without producing a coherent retrieval decision. By requiring convergence of both state geometry and phase alignment, Micro-ACT-R ensures that reasoning settles into interpretable, stable symbolic outcomes.
+
+\subsection{Error Feedback and Topological Reconfiguration}
+
+Inference is not assumed to be perfectly correct. When a candidate state fails to satisfy contextual constraints, the architecture measures the discrepancy
+\[
+e_i = \|x_i - x_i^{\ast}\|,
+\]
+where $x_i^{\ast}$ denotes the expected or target representation under task-specific constraints. This error is then propagated through the topology by a deformation term
+\[
+\Delta T = \sum_i \beta_i e_i \nabla_{x_i} \mathcal{R}(x_i),
+\]
+which reshapes the local geometry of the memory field and redistributes activation away from inconsistent candidates. In this way, failed retrieval trajectories do not simply terminate; they modify the effective potential landscape so that future reasoning passes through more compatible states.
+
+This feedback loop provides a mechanism for self-correction. If a candidate state becomes inconsistent with new evidence, its energy is elevated, its phase alignment is reduced, and neighboring states are reweighted accordingly. The resulting system can therefore adaptively backtrack, re-prioritize alternatives, and recover from local minima that would derail a purely linear production rule system.
+
+\subsection{Comparison with Classical Production Rule Matching}
+
+Classical ACT-R-like architectures treat Match \& Select as a largely implicit symbolic operation: working memory is compared against production conditions, and a single production is selected according to utility or conflict resolution. The reasoning process is therefore serial, discrete, and typically opaque to the modeler. Micro-ACT-R departs from this formulation in two fundamental ways.
+
+First, selection is explicit: it arises from the dynamics of a continuous energy landscape rather than from an abstract conflict set. Second, the architecture incorporates distributed coherence via phase synchronization, enabling compatible candidate states to reinforce one another while incompatible states are weakened. As a consequence, inference becomes both spatially organized and temporally adaptive.
+
+These differences are not merely representational; they alter the computational character of cognition. Classical production systems focus on rule dispatch under symbolic constraints, whereas Micro-ACT-R focuses on convergence in a structured semantic field. The result is a reasoning architecture that supports non-linear retrieval, contextual adaptation, and topological correction within a single unified process.
 
 \section{Implementation \& Complexity}
 % 6.1 Mapping Architecture to Graph-Based Code (Node/Edge Implementation)
