@@ -19,7 +19,8 @@ Traditional ACT-R models treat procedural matching and selection as discrete, bl
 
 ## 🏗 Architecture Overview
 
-<img width="1620" height="1359" alt="image" src="https://github.com/user-attachments/assets/6b7318dd-4145-429a-8331-7cfa9f97bfb7" />
+<img width="1443" height="1538" alt="image" src="https://github.com/user-attachments/assets/b1cfcadf-3645-446c-ade6-6bd63c987795" />
+
 
 ### Core Processing Loop
 1. **Sensory & Parsing:** `Environment` $\rightarrow$ `Sensory Modules (Visual/Aural)` $\rightarrow$ `Sentences Parse`
