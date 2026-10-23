@@ -1,14 +1,14 @@
 # Conscious-Declarative Cognitive Architecture (CDCA): A Topological & Particle-Based Cognitive Architecture
 
-**Micro-ACT-R** is a next-generation cognitive architecture that redefines traditional ACT-R by expanding its implicit reasoning ("Match & Select") process into a continuous, non-linear potential field driven by particle encapsulation, topology, and quantum-inspired entanglement.
+**Conscious-Declarative Cognitive Architecture** is a next-generation cognitive architecture that redefines traditional ACT-R by expanding its implicit reasoning ("Match & Select") process into a continuous, non-linear potential field driven by particle encapsulation, topology, and quantum-inspired entanglement.
 
 ---
 
-## 🌟 Why Micro-ACT-R? (Difference from Traditional ACT-R)
+## 🌟 Why Conscious-Declarative Cognitive Architecture? (Difference from Traditional ACT-R)
 
-Traditional ACT-R models treat procedural matching and selection as discrete, black-box production rule firings. **Micro-ACT-R deepens this reasoning pipeline** into a physical-like potential field:
+Traditional ACT-R models treat procedural matching and selection as discrete, black-box production rule firings. **Conscious-Declarative Cognitive Architecture deepens this reasoning pipeline** into a physical-like potential field:
 
-| Feature | Traditional ACT-R | Micro-ACT-R |
+| Feature | Traditional ACT-R | Conscious-Declarative Cognitive Architecture (CDCA) |
 | :--- | :--- | :--- |
 | **Reasoning Granularity** | Discrete Symbol/Rule Matching | Continuous Topological & Potential-Field Relaxation |
 | **State Dynamics** | Linear/Sequential Production Steps | Quantum-like Superposition & Non-local Entanglement |
@@ -54,7 +54,7 @@ Traditional ACT-R models treat procedural matching and selection as discrete, bl
 
 ## Demonstration Repositories
 
-This project includes several standalone prototype repositories that demonstrate specific subsystems of Micro-ACT-R.
+This project includes several standalone prototype repositories that demonstrate specific subsystems of Conscious-Declarative Cognitive Architecture.
 
 - [input-parser](https://github.com/ao-labs-123/input-parser)
 - [particle-encapsulation](https://github.com/ao-labs-123/particle-encapsulation)
@@ -67,11 +67,11 @@ For detailed notes and usage, see [docs/IMPLEMENTATIONS.md](docs/IMPLEMENTATIONS
 
 ## 📜 Citation & Paper
 
-If you use or reference Micro-ACT-R in your research, please refer to the specification paper in `paper/main.tex`:
+If you use or reference Conscious-Declarative Cognitive Architecture in your research, please refer to the specification paper in `paper/main.tex`:
 
 ```bibtex
 @article{micro_act_r_2026,
-  title={Micro-ACT-R: Extending Cognitive Architectures via Topological Potential Fields and Quantum Entanglement},
+  title={: Extending Cognitive Architectures via Topological Potential Fields and Quantum Entanglement},
   author={Your Name},
   journal={GitHub Repository},
   year={2026}
