@@ -1,4 +1,4 @@
-# Micro-ACT-R: A Topological & Particle-Based Cognitive Architecture
+# Conscious-Declarative Cognitive Architecture (CDCA): A Topological & Particle-Based Cognitive Architecture
 
 **Micro-ACT-R** is a next-generation cognitive architecture that redefines traditional ACT-R by expanding its implicit reasoning ("Match & Select") process into a continuous, non-linear potential field driven by particle encapsulation, topology, and quantum-inspired entanglement.
 
