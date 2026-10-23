@@ -1,8 +1,8 @@
-# Micro-ACT-R Implementations
+# Conscious-Declarative Cognitive Architecture (CDCA) Implementations
 
 ## 1. Overview
 
-Micro-ACT-R is structured as a multi-stage cognitive pipeline that transforms raw sensory input into a topological memory representation and then selects actions through a potential-based matching process.
+Conscious-Declarative Cognitive Architecture is structured as a multi-stage cognitive pipeline that transforms raw sensory input into a topological memory representation and then selects actions through a potential-based matching process.
 
 The architecture is intentionally split into prototype modules so each subsystem can be developed and tested independently before integration.
 
