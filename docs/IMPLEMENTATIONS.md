@@ -1,8 +1,8 @@
-# Conscious-Declarative Cognitive Architecture (CDCA) Implementations
+# Conscious Cognitive Architecture (CCA) Implementations
 
 ## 1. Overview
 
-Conscious-Declarative Cognitive Architecture is structured as a multi-stage cognitive pipeline that transforms raw sensory input into a topological memory representation and then selects actions through a potential-based matching process.
+Conscious Cognitive Architecture is structured as a multi-stage cognitive pipeline that transforms raw sensory input into a topological memory representation and then selects actions through a potential-based matching process.
 
 The architecture is intentionally split into prototype modules so each subsystem can be developed and tested independently before integration.
 
