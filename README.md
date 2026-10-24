@@ -1,5 +1,8 @@
 # Conscious Cognitive Architecture (CCA)
 
+<img width="1443" height="1538" alt="image" src="https://github.com/user-attachments/assets/93744e81-b789-4990-acc5-a78bc332eb54" />
+
+
 Conscious Cognitive Architecture (CCA) is a multimodal, non-linear cognitive architecture that reinterprets reasoning as a sensory-to-topological-to-linguistic process rather than as a discrete production-rule cycle. The central idea is that cognition emerges from structured memory dynamics, phase-coherent candidate selection, and error-driven adaptation of a topological reasoning field.
 
 This repository contains the architectural specification, the underlying theoretical formulation, and a set of prototype implementations that explore the core components of the system.
