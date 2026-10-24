@@ -1,79 +1,139 @@
-# Conscious Cognitive Architecture (CCA): A Topological & Particle-Based Cognitive Architecture
+# Conscious Cognitive Architecture (CCA)
 
-**Conscious Cognitive Architecture** is a next-generation cognitive architecture that redefines traditional ACT-R by expanding its implicit reasoning ("Match & Select") process into a continuous, non-linear potential field driven by particle encapsulation, topology, and quantum-inspired entanglement.
+Conscious Cognitive Architecture (CCA) is a multimodal, non-linear cognitive architecture that reinterprets reasoning as a sensory-to-topological-to-linguistic process rather than as a discrete production-rule cycle. The central idea is that cognition emerges from structured memory dynamics, phase-coherent candidate selection, and error-driven adaptation of a topological reasoning field.
 
----
-
-## 🌟 Why Conscious Cognitive Architecture? (Difference from Traditional ACT-R)
-
-Traditional ACT-R models treat procedural matching and selection as discrete, black-box production rule firings. **Conscious Cognitive Architecture deepens this reasoning pipeline** into a physical-like potential field:
-
-| Feature | Traditional ACT-R | Conscious Cognitive Architecture (CCA) |
-| :--- | :--- | :--- |
-| **Reasoning Granularity** | Discrete Symbol/Rule Matching | Continuous Topological & Potential-Field Relaxation |
-| **State Dynamics** | Linear/Sequential Production Steps | Quantum-like Superposition & Non-local Entanglement |
-| **Backtracking / Self-Correction** | Rule-level Re-evaluations | Dynamic Deformation of Topological Mapping |
-| **Memory Sync** | Fixed Retrieval Activation | Dual Categories (Knowledge vs. Dynamic Memory) |
+This repository contains the architectural specification, the underlying theoretical formulation, and a set of prototype implementations that explore the core components of the system.
 
 ---
 
-## 🏗 Architecture Overview
+## Why CCA?
 
-<img width="1443" height="1538" alt="image" src="https://github.com/user-attachments/assets/b1cfcadf-3645-446c-ade6-6bd63c987795" />
+Traditional ACT-R-like systems organize cognition around symbolic working memory and production matching. The match and select steps are typically treated as implicit, serial, and rule-based operations. CCA generalizes this process by making the internal dynamics of reasoning explicit.
 
+Instead of assuming that inference is a single symbolic selection event, CCA models cognition as a structured field of interacting memory candidates:
 
-### Core Processing Loop
-1. **Sensory & Parsing:** `Environment` $\rightarrow$ `Sensory Modules (Visual/Aural)` $\rightarrow$ `Sentences Parse`
-2. **Topological Pipeline:** `Particle Encapsulation` $\rightleftharpoons$ `Topological Mapping` $\rightleftharpoons$ `Spatial Allocation`
-3. **Quantization & Entanglement:** `Quantization` $\rightleftharpoons$ `Quantum Entanglement` $\rightleftharpoons$ `Memory/Storage`
-4. **Cognitive Control Hub:** `Goal Buffer`, `Retrieval Buffer`, `Knowledge Category (Declarative)`, `Procedural Module`
-5. **Execution & Feedback:** `Matching & Selection` $\rightarrow$ `Manual/Speech Buffer` $\rightarrow$ `Execution`
+- sensory evidence is first grounded in perceptual representations,
+- candidate states are embedded into a topological memory space,
+- spatial configuration and phase alignment determine which interpretation becomes dominant,
+- the stabilized state is then converted into a linguistic response.
 
----
-
-## 🔬 Theoretical Foundations
-
-- **Category Theory Alignment:** Ensures mathematical consistency between the **Knowledge Category** (invariant rules) and the **Memory Category** (dynamic contexts).
-- **Potential Energy & Backtracking:** Mismatches detected during `Match & Select` emit error energy back to the `Quantization` layer, dynamically deforming the upper `Topological Mapping` until the network stabilizes.
-- **Quantum Entanglement Phase:** Synchronizes discretized chunks across non-local memory spaces before committing to action selection.
+In other words, CCA treats memory as a dynamic relational structure rather than a flat lookup table.
 
 ---
 
-## 📁 Repository Structure
+## Architectural Overview
+
+CCA is organized as a dual-layer system composed of a symbolic control hub and a topological reasoning field.
+
+### 1. Sensory Processing and Particle Encapsulation
+The system begins with perceptual input from visual and auditory channels. These observations are encoded into particle-like representations, each carrying semantic, contextual, and structural information.
+
+### 2. Topological Mapping and Spatial Allocation
+Encoded inputs are mapped into a memory manifold where concepts are organized by similarity, activation, and retrieval history. This yields a topological arrangement in which candidate interpretations are spatially distributed and context-sensitive.
+
+### 3. Quantization and Phase Synchronization
+Continuous or semi-structured memory states are quantized into discrete representational units, and phase variables are introduced to model coherence between competing candidates. Compatible states reinforce one another, while inconsistent states are weakened.
+
+### 4. Knowledge Categories and Memory Storage
+Knowledge categories define stable symbolic structure, while memory storage provides dynamic contextual grounding. Category labels shape the topology, and the memory field determines which candidates remain viable under the current task context.
+
+### 5. Linguistic Response Module
+Once the reasoning field stabilizes, the most coherent cognitive state is passed to a linguistic response module that generates a grounded output aligned with the selected interpretation.
+
+---
+
+## Core Processing Loop
+
+The CCA cognitive cycle can be summarized as:
+
+Environment -> Sensory Modules -> Particle Encapsulation -> Topological Mapping -> Spatial Allocation -> Quantization & Phase Synchronization -> Knowledge/Memory -> Match & Select -> Linguistic Response -> Execution
+
+This is not a strictly feedforward pipeline. The loop is bidirectional: perception informs inference, and inference can also reshape memory through error-driven deformation and re-weighting.
+
+---
+
+## Theoretical Foundations
+
+CCA is grounded in a set of conceptual and mathematical principles:
+
+- Category-theoretic alignment of symbolic structure and memory states
+- Energy-based relaxation dynamics for inference and candidate selection
+- Phase-coupled synchronization as a coherence mechanism
+- Error feedback and topological deformation for adaptation and self-correction
+- Multimodal grounding of perception, memory, and language
+
+The formal paper models reasoning as an optimization process over a structured memory field, where candidate states evolve according to both energetic compatibility and phase coherence.
+
+---
+
+## Repository Structure
+
 ```text
-
-├── docs  
-│    └── IMPLEMENTATIONS.md
-├── paper
-│    └── main.tex
-│  
+.
 ├── README.md
-└── LICENSE
-
+├── LICENSE
+├── docs/
+│   └── IMPLEMENTATIONS.md
+├── paper/
+│   └── main.tex
+├── prototypes/
+│   └── (repository-based implementation modules)
+└── references/
+    └── (bibliographic and supporting material)
 ```
+
+The main specification is contained in `paper/main.tex`, while the documentation in `docs/IMPLEMENTATIONS.md` provides implementation-oriented notes and subsystem sketches.
+
+---
 
 ## Demonstration Repositories
 
-This project includes several standalone prototype repositories that demonstrate specific subsystems of Conscious Cognitive Architecture.
+This project is complemented by prototype repositories that demonstrate specific subsystems of the architecture:
 
 - [input-parser](https://github.com/ao-labs-123/input-parser)
 - [particle-encapsulation](https://github.com/ao-labs-123/particle-encapsulation)
 - [topological-mapper](https://github.com/ao-labs-123/topological-mapper)
 - [spatial-allocation](https://github.com/ao-labs-123/spatial-allocation)
 
-For detailed notes and usage, see [docs/IMPLEMENTATIONS.md](docs/IMPLEMENTATIONS.md).
+For deeper implementation notes, see [docs/IMPLEMENTATIONS.md](docs/IMPLEMENTATIONS.md).
 
 ---
 
-## 📜 Citation & Paper
+## Paper
 
-If you use or reference Conscious Cognitive Architecture in your research, please refer to the specification paper in `paper/main.tex`:
+The primary specification paper is located at `paper/main.tex`.
+
+Title:
+
+Conscious Cognitive Architecture (CCA): A Multimodal Non-Linear Cognitive Architecture Integrating Topological Inference and Quantum-Inspired Coherence
+
+The paper develops the architecture as a formal extension of traditional symbolic and production-based cognitive models, emphasizing:
+
+- multimodal perception,
+- topological inference,
+- phase synchronization,
+- memory-field dynamics,
+- language-grounded response generation.
+
+---
+
+## Citation
+
+If you use or reference CCA in your work, please cite the repository paper as follows:
 
 ```bibtex
-@article{micro_act_r_2026,
-  title={: Extending Cognitive Architectures via Topological Potential Fields and Quantum Entanglement},
-  author={Your Name},
+@article{cca_2026,
+  title={Conscious Cognitive Architecture (CCA): A Multimodal Non-Linear Cognitive Architecture Integrating Topological Inference and Quantum-Inspired Coherence},
+  author={ao},
   journal={GitHub Repository},
   year={2026}
 }
 ```
+
+---
+
+## Summary
+
+CCA is best understood as a non-linear cognitive architecture that moves beyond classical discrete rule firing. It combines sensory grounding, structured topological memory, phase coherence, and language generation into a unified reasoning cycle.
+
+The repository is intended to serve as both a conceptual specification and a research scaffold for developing more dynamic, context-sensitive cognitive systems.
