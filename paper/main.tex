@@ -74,6 +74,8 @@ Following spatial allocation, candidate states undergo quantization and phase sy
 
 This phase-based coordination is inspired by the idea that cognitive coherence emerges not only from local attraction but also from distributed alignment across multiple memory elements. When phases become aligned, conceptually compatible states reinforce one another; when phases diverge, the corresponding candidates are weakened. This mechanism is especially important in ambiguous or noisy settings, where inference requires coherent support across multiple memory fragments.
 
+The quantum-inspired mechanism is not used as a literal physical claim about entanglement in the brain, but as a computational analogy for two distinct consistency checks. First, during hypothesis evaluation, alternative candidate interpretations are treated as competing possibilities and tested for global coherence with the current perceptual and semantic context. This is the phase of inference in which the system asks whether a proposed interpretation remains compatible with the evidence. Second, during goal-directed action selection, the same logic is applied to alternative action paths or candidate plans: each option is evaluated for consistency with the task objective, current constraints, and the evolving memory field. In both cases, the underlying operation is the same at an abstract level: candidate states are compared for global consistency, and the more coherent configuration is retained. The difference is the timing and purpose of the comparison. In early inference, consistency is used to adjudicate competing hypotheses; in later planning, it is used to adjudicate competing actions. The overall cognitive process therefore exhibits a bidirectional revision loop, in which tentative hypotheses can be revisited, earlier states can be reweighted, and the system can backtrack to a previous interpretation when a new inconsistency is discovered.
+
 \subsection{Knowledge Categories and Memory Storage}
 
 The final component of the architecture concerns the relationship between abstract knowledge categories and the concrete memory substrate. In CCA, knowledge categories guide the interpretation of sensory evidence and determine the region of the field in which candidate states are likely to be stable.
@@ -212,6 +214,8 @@ X^{(t+1)} = X^{(t)} - \eta \nabla_X E(X^{(t)},\Theta^{(t)}),
 \Theta^{(t+1)} = \Theta^{(t)} + \tau \,\mathcal{S}(\Theta^{(t)},\Gamma),
 \]
 where $\mathcal{S}$ denotes the phase synchronization operator. The process terminates when the energy decrease falls below a threshold, when the phase alignment stabilizes, or when the candidate set becomes sufficiently coherent for output generation.
+
+The key property is that the architecture is not a strictly feedforward pipeline. The reasoning loop is bidirectional: the system can move from observation to candidate interpretation, but it can also reverse the trajectory and revisit earlier candidate states when the evidence becomes contradictory or when a more coherent configuration emerges. This backtracking capability is essential for maintaining consistency under uncertainty and for revising hypotheses without committing prematurely to an incorrect interpretation.
 
 \subsection{Comparison with Classical Production Rule Matching}
 
