@@ -26,7 +26,7 @@ However, this view of cognition is limited in a crucial way. The Match and Selec
 
 Conscious Cognitive Architecture (CCA) addresses this limitation by redefining cognition as a process that begins with sensory input and proceeds through topological inference before producing a response. Visual and auditory information is first transformed into particle-like memory candidates. These candidates are embedded into a structured topological field defined by semantic relations, compatibility constraints, and retrieval history. Inference then emerges not from a discrete production choice but from the convergence of the candidate set under an energy landscape shaped by relational compatibility and phase synchronization.
 
-This shift is critical. In ACT-R-like systems, reasoning is organized around symbolic selection. In CCA, reasoning is organized around the dynamic organization of perceptual evidence in a memory manifold. Candidate states are not simply matched against known rules; they are positioned, compared, and stabilized in a relational space. The architecture therefore treats cognition as a non-linear process of field-based convergence rather than as linear rule dispatch.
+This shift is critical. In ACT-R-like systems, reasoning is organized around symbolic selection. In CCA, reasoning is organized around the dynamic organization of perceptual evidence in a memory manifold. Candidate states are not simply matched against known rules; they are positioned, compared, and stabilized in a relational space. The architecture therefore treats cognition as a non-linear process of field-based convergence rather than linear rule dispatch.
 
 The central contribution of this paper is therefore to move beyond the conventional ACT-R view of reasoning as symbolic rule execution. We propose a multimodal cognitive architecture in which perception, topology, and quantum-inspired coherence jointly support inference. We further define a Linguistic Response Module that does not merely translate internal representations into language, but participates in the same inferential loop as the rest of the cognitive system. This extension is important because it enables the architecture to function as a foundation for conversational and interactive AI systems, where perception, reasoning, and output must be coupled coherently.
 
@@ -35,13 +35,13 @@ The central contribution of this paper is therefore to move beyond the conventio
 
 Traditional cognitive architectures such as ACT-R model reasoning as a sequence of production cycles in which working memory is compared against condition elements and a single production is selected according to conflict resolution. This formalism has been successful in accounting for performance, learning, and task decomposition in symbolic settings.
 
-However, such systems remain largely serial and rule-based in their conceptual organization. Their strength lies in symbolic control, but their weakness is that they do not explicitly model the perceptual grounding of memory or the non-linear dynamics of candidate competition. CCA differs from this perspective by treating inference as a topological convergence process over perceptually grounded memory states rather than as a sequence of discrete production firings.
+However, such systems remain largely serial and rule-based in their conceptual organization. Their strength lies in symbolic control, but their weakness is that they do not explicitly model the perceptual grounding of memory or the non-linear dynamics of candidate competition. CCA differs from this perspective by treating inference as a topological convergence process over perceptually grounded memory states rather than a sequence of discrete production firings.
 
 \subsection{Structured Knowledge and Category-Theoretic Models}
 
 A second line of work emphasizes structured representations of knowledge, including semantic graphs, category-theoretic accounts of cognition, and compositional memory architectures. These approaches are valuable because they model knowledge as relational and organized rather than flat or purely symbolic.
 
-CCA is aligned with this structural perspective in that memory is organized through semantic relations, category labels, and contextual compatibility. However, our framework extends this view by coupling representational structure to multimodal perception and to dynamic field-based inference. Rather than merely storing structured knowledge, CCA actively reasons over the topology of that structure and uses distributed phase coherence to stabilize candidate interpretations.
+CCA is aligned with this structural perspective in that memory is organized through semantic relations, category labels, and contextual compatibility. However, our framework extends this view by coupling representational structure to multimodal perception and dynamic field-based inference. Rather than merely storing structured knowledge, CCA actively reasons over the topology of that structure and uses distributed phase coherence to stabilize candidate interpretations.
 
 \subsection{Potential Fields, Graph Dynamics, and Quantum-Inspired Architectures}
 
@@ -66,7 +66,19 @@ The particle abstraction provides a bridge between raw sensory input and the dyn
 
 The second stage constructs a memory map in which conceptual units are allocated according to semantic similarity, activation, and retrieval history. Each memory node occupies a position determined by its relationship to neighboring items, while edges encode compatibility, co-occurrence, or historical association.
 
-Through this organization, the reasoning field supports a form of context-sensitive navigation in which interpretations are not selected from a flat symbolic inventory but emerge from spatial organization. Candidate states that are semantically compatible cluster together, while inconsistent or noisy candidates remain weakly supported or remain separated in the topology.
+Through this organization, the reasoning field supports a form of context-sensitive navigation in which interpretations are not selected from a flat symbolic inventory but emerge from spatial organization. Candidate states that are semantically compatible cluster together, while inconsistent or noisy candidates remain weakly supported or separated in the topology.
+
+\subsection{Regulatory Boundaries and Action-Envelope Constraints}
+
+Once candidate states are embedded in the memory manifold, their coordinates do not merely denote semantic similarity. They also define a local action envelope: a region of the space that remains admissible for interpretation and action, and a region that should be suppressed as incompatible, unsafe, or normatively invalid. In other words, the memory topology becomes not only a representational map but also a bounded control field.
+
+Let $x_i$ denote the coordinate of a candidate state and let $B(x_i)$ be a regulatory barrier function that penalizes motion outside the admissible region. The effective reasoning objective then becomes
+\[
+E_{\text{total}}(X,\Theta) = E(X,\Theta) + \lambda_B \sum_i B(x_i),
+\]
+where $\lambda_B$ controls the strength of the boundary constraint. When a candidate moves toward a region associated with incompatible categories, prohibited actions, or legally invalid interpretations, $B(x_i)$ rises sharply and the trajectory is damped or redirected. This yields a coordinate-dependent stopping mechanism: the system does not merely select the most compatible interpretation, but also suppresses trajectories that cross the boundary of the currently allowable cognitive action space.
+
+This mechanism can be viewed as a computational analogue of a dorsolateral prefrontal-like control function. It is not presented as a literal claim about human frontal cortex anatomy; rather, it captures the idea that topological reasoning can be constrained by explicit regulatory boundaries. In practical terms, the geometry of the memory field defines the permissible region of inference, while the boundary field acts as a stopper that prevents the system from continuing toward states that violate task requirements, ethical constraints, or legal norms. The result is a constrained form of topological inference in which semantic flexibility is preserved within the admissible manifold, but behavioral exploration is regulated at the boundary of the valid action envelope.
 
 \subsection{Quantization and Phase Synchronization}
 
@@ -106,7 +118,7 @@ Let the active reasoning state be represented as a set of candidate memory vecto
 \[
 X = \{x_1, x_2, \ldots, x_n\}, \quad x_i \in \mathbb{R}^d.
 \]
-Each $x_i$ corresponds to a memory unit, a concept, or a candidate perceptual state. The architecture therefore treats memory not as a flat lookup table, but as a structured topological manifold whose geometry is shaped by semantic, contextual, and historical relations.
+Each $x_i$ corresponds to a memory unit, a concept, or a candidate perceptual state. The architecture therefore treats memory not as a flat lookup table, but as a structured topological manifold whose geometry is shaped by semantics, context, and historical relations.
 
 \subsection{Potential Energy and Relaxation Dynamics}
 
@@ -192,7 +204,7 @@ The selected state is the candidate that remains stable after the field relaxes 
 
 \subsection{Linguistic Response Generation}
 
-Once the field stabilizes, the dominant cognitive state is transferred to a Linguistic Response Module. This module converts the selected interpretation into a language response that is consistent with the activated semantic structure and the communicative context. The output is therefore grounded in the same internal state that supports interpretation, rather than generated from a detached symbolic layer.
+Once the field stabilizes, the dominant cognitive state is transferred to a Linguistic Response Module. This module converts the selected interpretation into a language response that is consistent with the activated semantic structure and the communicative context.
 
 \subsection{Loop Stabilization and Potential Convergence}
 
@@ -215,7 +227,7 @@ X^{(t+1)} = X^{(t)} - \eta \nabla_X E(X^{(t)},\Theta^{(t)}),
 \]
 where $\mathcal{S}$ denotes the phase synchronization operator. The process terminates when the energy decrease falls below a threshold, when the phase alignment stabilizes, or when the candidate set becomes sufficiently coherent for output generation.
 
-The key property is that the architecture is not a strictly feedforward pipeline. The reasoning loop is bidirectional: the system can move from observation to candidate interpretation, but it can also reverse the trajectory and revisit earlier candidate states when the evidence becomes contradictory or when a more coherent configuration emerges. This backtracking capability is essential for maintaining consistency under uncertainty and for revising hypotheses without committing prematurely to an incorrect interpretation.
+The key property is that the architecture is not a strictly feedforward pipeline. The reasoning loop is bidirectional: the system can move from observation to candidate interpretation, but it can also reverse the trajectory and revisit earlier candidate states when the evidence becomes contradictory or when a more coherent configuration emerges. This backtracking capability is essential for maintaining consistency under uncertainty and for revising hypotheses without prematurely committing to an incorrect interpretation.
 
 \subsection{Comparison with Classical Production Rule Matching}
 
@@ -286,7 +298,7 @@ This analysis shows that CCA is computationally feasible in sparse or locally co
 
 \subsection{Future Directions}
 
-A natural extension is the development of a hybrid symbolic-neural implementation in which the topological layer is learned from data while the control hub retains explicit symbolic constraints. Such extensions would preserve the conceptual principles of CCA while making the model more scalable and deployment-ready.
+A natural extension is the development of a hybrid symbolic-neural implementation in which the topological layer is learned from data while the control hub retains explicit symbolic constraints. Such systems would preserve the conceptual principles of CCA while making the model more scalable and deployment-ready.
 
 \section{Experiments / Evaluation}
 
@@ -333,7 +345,7 @@ A second set of experiments measured convergence behavior over repeated retrieva
 
 \subsection{Summary of Findings}
 
-Overall, the evaluation demonstrates that CCA improves retrieval and response generation in semantically complex environments by explicitly modeling memory as a structured, dynamic field rather than as a flat symbolic store. The architecture is particularly effective when inference requires multimodal grounding and contextual coherence.
+Overall, the evaluation demonstrates that CCA improves retrieval and response generation in semantically complex environments by explicitly modeling memory as a structured, dynamic field rather than a flat symbolic store. The architecture is particularly effective when inference requires multimodal grounding and contextual coherence.
 
 \section{Discussion}
 
@@ -351,7 +363,7 @@ This paper introduced the Conscious Cognitive Architecture (CCA), a multimodal n
 
 The key contribution is therefore conceptual as well as formal: memory is treated not as a flat symbolic store but as a structured, relational field in which visual and auditory evidence, category organization, and contextual dynamics jointly determine interpretation. The architecture further incorporates a Linguistic Response Module so that the same internal cognitive state that supports inference can also generate output. This makes CCA a promising foundation for interactive AI systems that require grounded reasoning and conversational competence.
 
-Future work will focus on empirical evaluation, sparse graph implementations, and hybrid symbolic-neural extensions that preserve interpretability while improving scalability. By grounding reasoning in perception and by integrating output generation into the same inferential loop, CCA moves beyond classical production-based models toward a more cognitively plausible architecture for intelligent interaction.
+Future work will focus on empirical evaluation, sparse graph implementations, and hybrid symbolic-neural extensions that preserve interpretability while improving scalability. By grounding reasoning in perception and integrating output generation into the same inferential loop, CCA moves beyond classical production-based models toward a more cognitively plausible architecture for intelligent interaction.
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}
