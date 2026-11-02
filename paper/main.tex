@@ -12,23 +12,23 @@
 
 \section{Abstract}
 
-Traditional cognitive architectures, such as ACT-R, are organized around discrete symbolic processing in which working memory is compared against production rules and a single rule is selected for execution. This approach has proven effective for many forms of structured reasoning, but it leaves the internal dynamics of matching and selection relatively opaque. In contrast, CCA models cognition as a continuous process of perceptual grounding, topological organization, and relational inference.
+Traditional cognitive architectures, such as ACT-R, are organized around discrete symbolic processing in which working memory is compared against production rules and a single rule is selected for execution. This approach has proven effective in many structured reasoning settings, but it treats matching and selection as largely implicit operations whose internal dynamics remain under-specified. In contrast, CCA models cognition as a continuous, multimodal, and topologically organized process that begins with sensory grounding and ends in structured linguistic response.
 
-The central contribution of this paper is therefore to redefine the cognitive cycle as a sensory-to-topological-to-linguistic process rather than as a discrete Match \& Select procedure. In CCA, perceptual evidence is first encoded as particle-like states, then embedded into a memory manifold, and finally reconciled through energy minimization and phase synchronization before symbolic expression is generated. This reconfiguration allows cognition to operate not merely on explicit rules but on dynamically organized memory relations.
+The central contribution of this paper is therefore to redefine the cognitive cycle as a sensory-to-topological-to-linguistic process rather than as a discrete Match \& Select procedure. In CCA, perceptual evidence is first encapsulated as particle-like representations, then embedded into a memory manifold, and finally reconciled through energy minimization, phase synchronization, and contextual regulation before a response is generated. This reconfiguration allows cognition to operate not merely on explicit rules but on dynamically organized memory relations and coherence constraints.
 
-A second important distinction is the role of output generation. In classical architectures, language is often treated as a downstream symbolic product. In CCA, the Linguistic Response Module is integrated into the reasoning loop itself and is not merely a post hoc formatter. The module parses input, stabilizes the cognitive state, generates an utterance aligned with the active interpretation, and iteratively re-evaluates the generated output against the original intent, task context, and discourse constraints.
+A second important distinction is the role of output generation. In classical architectures, language is often treated as a downstream symbolic product. In CCA, the Linguistic Response Module is integrated into the reasoning loop itself and is not merely a post hoc formatter. The architecture uses the same five-stage analytic schema for both initial input interpretation and response construction, while also feeding generated candidate utterances back into the same loop for self-checking, revision, and refinement.
 
 \section{Introduction}
 
 Traditional cognitive architectures, such as ACT-R, have provided a powerful account of cognition by organizing reasoning as a sequence of production cycles. In such systems, information in working memory is compared against condition elements and a single production is selected for execution. This formulation captures many aspects of symbolic control, but it also imposes a strong separation between representation, selection, and expression.
 
-However, this view of cognition is limited in a crucial way. The Match and Select stages are usually treated as implicit, optimized symbolic operations, and their internal dynamics are not themselves modeled in detail. As a result, most production systems do not explicitly account for the perceptual and relational structure that makes candidate interpretations stable or unstable in context.
+However, this view of cognition is limited in a crucial way. The Match and Select stages are usually treated as implicit, optimized symbolic operations, and their internal dynamics are not themselves modeled in detail. As a result, most production systems do not explicitly account for the perceptual, relational, and contextual structure that makes candidate interpretations stable or unstable in context.
 
 Conscious Cognitive Architecture (CCA) addresses this limitation by redefining cognition as a process that begins with sensory input and proceeds through topological inference before producing a response. Instead of treating inference as a symbolic selection problem alone, CCA treats it as a structured search over a memory field in which candidate states are dynamically arranged, relaxed, and synchronized.
 
-This shift is critical. In ACT-R-like systems, reasoning is organized around symbolic selection. In CCA, reasoning is organized around the dynamic organization of perceptual evidence in a memory manifold. The result is a cognitive architecture whose internal state is not merely symbolic but spatial, relational, and phase-coherent.
+This shift is critical. In ACT-R-like systems, reasoning is organized around symbolic selection. In CCA, reasoning is organized around the dynamic organization of perceptual evidence in a memory manifold. The result is a cognitive architecture whose internal state is not merely symbolic but spatial, relational, and coherence-driven.
 
-The central contribution of this paper is therefore to move beyond the conventional ACT-R view of reasoning as symbolic rule execution. We propose a multimodal cognitive architecture in which perceptual input, conceptual structure, and language generation are integrated across a single dynamic loop. The architecture supports contextual interpretation, coherent retrieval, and language-conditioned response refinement.
+The central contribution of this paper is therefore to move beyond the conventional ACT-R view of reasoning as symbolic rule execution. We propose a multimodal cognitive architecture in which perceptual input, conceptual structure, and language generation are integrated across a single dynamic loop. The architecture supports contextual interpretation, coherent retrieval, and response refinement under both sensory and linguistic constraints.
 
 \section{Related Work}
 \subsection{ACT-R and Production Systems}
@@ -112,9 +112,11 @@ A central distinction of CCA is that it does not stop at internal interpretation
 
 This design is essential for interactive AI. The system is not merely required to classify or retrieve information; it must also generate a response grounded in the same cognitive state that supports interpretation. In CCA, language is therefore not a detached output stage but a continuation of the same reasoning process.
 
-At the linguistic level, the system applies the same five-stage analysis used for incoming natural language. The response pipeline begins with intent parsing, in which the current task objective and interlocutor request are identified. This is followed by semantic extraction, in which the relevant propositions, categories, and constraints are isolated from the active memory state. Third, the architecture organizes the content into discourse structure, selecting a response form that preserves salience, hierarchy, and relevance. Fourth, it evaluates coherence and adequacy by checking whether the generated utterance remains aligned with the original question, the active context, and the stable cognitive interpretation. Finally, it performs output calibration, adjusting wording, compression, emphasis, and summarization so that the utterance is both faithful and clear.
+The response module relies on the same five-stage linguistic analysis used for initial input analysis. The first stage estimates the agent and subject of the utterance; the second infers context and causality; the third clarifies modifications and relational scope; the fourth maps the argument structure; and the fifth extracts a 5W1H frame and synthesizes the final semantic content. These stages are used not only to interpret incoming user input but also to guide the construction of a candidate response. In other words, the system composes an answer by explicitly checking: who is acting, what is being described, which relationships and modifications matter, which claims are supported, and which final fact-pattern should be expressed.
 
-This is not merely a final wording step. After an utterance is produced, it is re-embedded as a new linguistic input and re-analyzed through the same structural cycle. The system asks whether the response actually tracks the interlocutor's intent, whether the main point is being clearly and compactly expressed, and whether the generated sentence is an accurate summary of the intended cognitive state. If the answer is negative, the architecture applies a corrective update: it revises the phrasing, rebalances the emphasis, or reformulates the summary before final output. In this sense, linguistic response generation is a self-monitoring and self-correcting process rather than a one-shot decoding operation.
+This is not merely a final wording step. After an utterance is produced, it is re-embedded into the same cognitive loop as a candidate input and re-analyzed through the same five-stage schema. The system asks whether the response remains aligned with the original intent, whether the key proposition is preserved, whether the discourse structure is coherent, and whether the generated sentence adequately summarizes the active cognitive state. If the answer is negative, the architecture applies a corrective update: the wording is revised, the relation between claims is restructured, or the summary is compressed or expanded to preserve interpretive fidelity.
+
+This recursive procedure is essential because the architecture views generation as a loop rather than as a one-shot decoding process. The output is therefore not accepted solely because it is fluent; it is accepted only after it satisfies the same interpretive constraints that governed the original input. The system thus performs a second-order evaluation in which a generated sentence is checked against the user request, the active memory state, and the intended semantic summary before final emission.
 
 \section{Mathematical Formulation}
 
@@ -183,7 +185,7 @@ where $\delta_i$ represents local contextual bias. When phases become aligned, c
 
 Reasoning is not assumed to be error-free. Let the discrepancy between a predicted and observed state be
 \[
- e_i = \|x_i - x_i^{\ast}\|,
+e_i = \|x_i - x_i^{\ast}\|,
 \]
 where $x_i^{\ast}$ denotes the target or expected representation under contextual constraints. The architecture updates the memory topology through a deformation term
 \[
@@ -222,7 +224,7 @@ The selected state is the candidate that remains stable after the field relaxes 
 
 Once the field stabilizes, the dominant cognitive state is transferred to a Linguistic Response Module. This module converts the selected interpretation into a language response that is consistent with the current memory geometry, task context, and phase-aligned candidate set.
 
-The response process is recursive and self-monitoring. It begins by parsing the question or task instruction into communicative intent, then extracts the core semantic content that the system intends to express. The response is then organized into a coherent discourse structure and evaluated against the original context. The system checks whether the generated utterance remains aligned with the other party's intent, whether it faithfully summarizes the intended message, and whether it retains the relevant distinctions and constraints represented in the active cognitive state. If those checks fail, the utterance is revised before final output.
+The response process is recursive and self-monitoring. It begins by parsing the task instruction or question into communicative intent, then extracts the core semantic content that the system intends to express. The candidate response is assembled while explicitly consulting the same five-stage linguistic schema used for initial input analysis: agent and subject estimation, context and causality inference, modification clarification, argument mapping, and 5W1H-based semantic synthesis. After this construction stage, the generated sentence is fed back into the same loop for evaluation. The system checks whether the utterance remains aligned with the user's intent, whether the central proposition is preserved, and whether the output remains a faithful summary of the active cognitive state.
 
 \subsection{Loop Stabilization and Potential Convergence}
 
@@ -235,8 +237,9 @@ Inference in CCA proceeds in iterative cycles. At each cycle, the architecture p
 5. Compute the total energy and its gradients.
 6. Update candidate positions and phases until convergence.
 7. Extract the dominant stable candidate set and pass it to the Linguistic Response Module.
-8. Re-analyze the generated utterance using the same five-stage linguistic pipeline: intent recognition, semantic extraction, discourse organization, adequacy check, and output calibration.
-9. Compare the response with the original context and revise if the wording no longer matches the user's intent or the system's intended summary.
+8. Use the five-stage schema to guide response construction.
+9. Re-evaluate the generated utterance by feeding it back into the same analytic loop.
+10. Revise the wording, emphasis, or summary if discourse alignment is insufficient.
 
 This loop can be expressed as:
 \[
@@ -245,7 +248,7 @@ X^{(t+1)} = X^{(t)} - \eta \nabla_X E(X^{(t)},\Theta^{(t)}),
 \[
 \Theta^{(t+1)} = \Theta^{(t)} + \tau \,\mathcal{S}(\Theta^{(t)},\Gamma),
 \]
-where $\mathcal{S}$ denotes the phase synchronization operator. The process terminates when the energy decrease falls below a threshold, when the phase alignment stabilizes, or when the candidate set is sufficiently coherent for linguistic expression. A final response is only accepted once the generated sentence survives this post-output adequacy check.
+where $\mathcal{S}$ denotes the phase synchronization operator. The process terminates when the energy decrease falls below a threshold, when the phase alignment stabilizes, or when the candidate set is sufficiently coherent for linguistic expression. A final response is only accepted after the generated sentence survives the second-order adequacy check.
 
 The key property is that the architecture is not a strictly feedforward pipeline. The reasoning loop is bidirectional: the system can move from observation to candidate interpretation, but it can also re-enter the interpretive layer through output assessment, revision, and discourse-level feedback.
 
@@ -253,13 +256,13 @@ The key property is that the architecture is not a strictly feedforward pipeline
 
 Classical ACT-R-like architectures treat reasoning as a largely implicit symbolic operation: working memory is compared against production conditions, and a single production is selected according to activation and conflict resolution. In those systems, language generation is typically treated as a separate mapping from symbolic state to text.
 
-The first difference is therefore sensory grounding. CCA does not assume that symbolic rules are applied to already-structured memory; it assumes that perception itself is the starting point of interpretation. The second difference is linguistic recursion. CCA does not treat output as a terminal event; instead, it re-inserts the generated sentence into the same analytic structure as an input and checks whether it preserves the intended meaning, the interlocutor's request, and the active task state.
+The first difference is therefore sensory grounding. CCA does not assume that symbolic rules are applied to already-structured memory; it assumes that perception itself is the starting point of interpretation. The second difference is recursive response control. CCA does not treat output as a terminal event; instead, it uses the same five-stage schema to build a candidate response and then re-inserts that sentence into the same analytic loop for self-verification.
 
 Consequently, CCA reframes cognition as a distributed process of perceptual grounding, topological inference, and generative response refinement rather than as a sequence of discrete production firings.
 
 \section{Implementation \& Complexity}
 
-CCA can be implemented as a hybrid symbolic-graph system in which the control layer maintains explicit task symbols and category labels while the topological layer maintains a weighted memory graph. The Linguistic Response Module can be implemented as a second graph or sequence model that converts the stabilized state into a natural-language summary while simultaneously comparing the output to the original task structure.
+CCA can be implemented as a hybrid symbolic-graph system in which the control layer maintains explicit task symbols and category labels while the topological layer maintains a weighted memory graph. The Linguistic Response Module can be implemented as a second-stage sentence generator that consults the same five-stage schema and performs a recursive verification pass over the candidate response.
 
 \subsection{Mapping Architecture to Graph-Based Code}
 
@@ -272,10 +275,10 @@ A minimal implementation can be organized as follows:
     \item State update: iterative gradient descent over the total energy $E(X,\Theta)$.
     \item Phase update: synchronization dynamics over neighboring nodes.
     \item Retrieval: selection of the stable candidate set with minimal energy and maximal phase coherence.
-    \item Response: generation of natural language from the stable cognitive state, followed by post-output adequacy checking and revision.
+    \item Response: generation of natural language from the stable cognitive state using the five-stage schema, followed by post-output adequacy checking and revision.
 \end{itemize}
 
-This design admits a direct computational interpretation. The topological field is a weighted graph $G=(V,E)$ with $|V|=n$ active memory elements and $|E|=m$ relations. Each node stores a latent representation $x_i$, a category label $k_i$, and an activity score. The response module adds a second-stage narrative graph that tracks intent, propositions, and discourse emphasis as the system refines the final utterance.
+This design admits a direct computational interpretation. The topological field is a weighted graph $G=(V,E)$ with $|V|=n$ active memory elements and $|E|=m$ relations. Each node stores a latent representation $x_i$, a category label $k_i$, and an activity score. The response module adds a second-stage narrative layer that tracks intent, discourse roles, and proposition emphasis as the system refines the final utterance.
 
 \subsection{Expected Computational Complexity}
 
