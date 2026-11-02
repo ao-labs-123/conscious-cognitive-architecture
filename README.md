@@ -1,27 +1,38 @@
 # Conscious Cognitive Architecture (CCA)
 <img width="1016" height="1101" alt="image" src="https://github.com/user-attachments/assets/963a2b67-4f85-4eec-a60d-71bc99eaf7f3" />
 
+Conscious Cognitive Architecture (CCA) is a multimodal, non-linear cognitive architecture for modeling how sensory input, memory structure, and contextual coherence interact to form stable internal states. The repository is intended as a conceptual specification and research scaffold rather than a finished production inference engine.
 
-Conscious Cognitive Architecture (CCA) is a multimodal, non-linear cognitive architecture for modeling how sensory input, memory structure, and contextual coherence interact to form stable internal states.
+This project is best understood as a versioned research framework rather than a single universal claim. The central question is not simply “how do we execute explicit symbolic reasoning,” but how perceptual evidence, memory dynamics, and contextual fit combine to produce coherent cognitive states.
 
-This repository is intended as a conceptual specification and research scaffold rather than a finished production inference engine. The central question is not simply “how do we execute explicit symbolic rules,” but “how does information become organized, stabilized, and expressed as a coherent cognitive configuration over time?”
+In other words, the project studies the mechanisms by which perceptual evidence is embedded into memory, how competing candidates are organized in a topological field, and how a stable state emerges from that interaction. The architecture is not limited to a single representational substrate; different versions can emphasize different levels of grounding and behavior.
 
-In other words, the project studies the mechanisms by which perceptual evidence is embedded into memory, how competing candidates are organized in a topological field, and how a stable state emerges before being converted into language or action.
+---
+
+## Versioned Framing
+
+CCA is organized as a family of versions rather than a single monolithic architecture.
+
+- Ver 1.0 — language-specialized version: the version currently represented in the paper and core specification, centered on language-grounded cognition, symbolic structure, and coherent linguistic response formation.
+- Ver 2.0 — situational-awareness version: a non-language-dependent variant in which the architecture is driven by environmental stimuli and embodied response dynamics, with the emphasis on context-sensitive state formation rather than verbal mediation.
+- Ver 3.0 — affective/emotional version (planned): an extension that incorporates motivational and evaluative dynamics, so that cognitive stabilization is modulated by affective state, arousal, and valence.
+
+The conceptual core is shared across versions: perception, memory organization, candidate stabilization, and contextual coherence remain central. What changes across versions is which substrate is treated as primary—language, environmental situation, or affective dynamics.
 
 ---
 
 ## Why CCA?
 
-Traditional ACT-R-like systems organize cognition around symbolic working memory and production matching. The match and select steps are typically treated as implicit, serial, and rule-based operations. This is effective for procedural control and symbolic execution, but it does not explicitly model how candidate states are organized, compared, and stabilized in a structured memory landscape.
-
-CCA begins from a different premise:
+Traditional ACT-R-like systems organize cognition around symbolic working memory and production matching. The match and select steps are typically treated as implicit, serial, and rule-based operations. CCA begins from a different premise:
 
 - sensory evidence is first grounded in perceptual representations,
 - candidate states are embedded into a topological memory space,
 - spatial configuration and phase alignment determine which interpretation becomes dominant,
 - the stabilized state is then converted into a linguistic response.
 
-This is not a classical symbolic inference engine in the strict A→B→C sense. It is closer to a model of cognitive state formation: how information becomes organized into a coherent internal configuration before it is expressed or acted upon.
+This is not a classical symbolic inference engine in the strict A→B→C sense. It is closer to a model of cognitive state formation: how information becomes organized into a coherent internal configuration and how that configuration is selectively expressed.
+
+The broader framing is intentionally general: a single architecture can be instantiated in language-specialized, non-linguistic, or affective variants depending on the research question.
 
 ---
 
@@ -33,13 +44,13 @@ CCA is organized as a dual-layer system composed of a symbolic control hub and a
 The system begins with perceptual input from visual and auditory channels. These observations are encoded into particle-like representations, each carrying semantic, contextual, and structural information.
 
 ### 2. Topological Mapping and Spatial Allocation
-Encoded inputs are mapped into a memory manifold where concepts are organized by similarity, activation, and retrieval history. This yields a topological arrangement in which candidate interpretations are distributed according to compatibility and contextual relevance.
+Encoded inputs are mapped into a memory manifold where concepts are organized by similarity, activation, and retrieval history. This yields a topological arrangement in which candidate interpretations compete and stabilize.
 
 ### 3. Quantization and Phase Synchronization
-Continuous or semi-structured memory states are quantized into discrete representational units, and phase variables are introduced to model coherence between competing candidates. Compatible states reinforce one another; competing states are weakened or destabilized.
+Continuous or semi-structured memory states are quantized into discrete representational units, and phase variables are introduced to model coherence between competing candidates. Compatible states reinforce one another, while incompatible candidates are damped.
 
 ### 4. Knowledge Categories and Memory Storage
-Knowledge categories define stable symbolic structure, while memory storage provides dynamic contextual grounding. Category labels shape the topology, and the memory field determines which candidates remain viable under a given task context.
+Knowledge categories define stable symbolic structure, while memory storage provides dynamic contextual grounding. Category labels shape the topology, and the memory field determines which candidate becomes dominant.
 
 ### 5. Linguistic Response Module
 Once the reasoning field stabilizes, the most coherent cognitive state is passed to a linguistic response module that generates a grounded output aligned with the selected interpretation.
@@ -90,7 +101,7 @@ The formal paper models cognition as an optimization process over a structured m
 
 The main specification is contained in `paper/main.tex`, while the documentation in `docs/IMPLEMENTATIONS.md` provides implementation-oriented notes and subsystem sketches.
 
-The repository is intentionally structured as a specification and prototype scaffold. The prototype repositories referenced in the architectural notes are planned or under development rather than fully realized runtime systems.
+The repository is intentionally structured as a specification and prototype scaffold. The prototype repositories referenced in the architectural notes are planned or under development rather than complete end-to-end systems.
 
 ---
 
@@ -111,11 +122,11 @@ For deeper implementation notes, see [docs/IMPLEMENTATIONS.md](docs/IMPLEMENTATI
 
 ## Paper
 
-The primary specification paper is located at `paper/main.tex`.
+The primary specification paper currently corresponds to CCA Ver. 1.0.
 
 Title:
 
-Conscious Cognitive Architecture (CCA): A Multimodal Memory-Field Architecture for Cognitive State Stabilization and Coherent Response Formation
+Conscious Cognitive Architecture (CCA) Ver. 1.0: A Language-Grounded Multimodal Memory-Field Architecture for Cognitive State Stabilization and Coherent Response Formation
 
 The paper develops the architecture as a formal extension of traditional symbolic and production-based cognitive models, emphasizing:
 
@@ -134,8 +145,8 @@ The paper is best understood as a conceptual and mathematical model of how cogni
 If you use or reference CCA in your work, please cite the repository paper as follows:
 
 ```bibtex
-@article{cca_2026,
-  title={Conscious Cognitive Architecture (CCA): A Multimodal Memory-Field Architecture for Cognitive State Stabilization and Coherent Response Formation},
+@article{cca_v1_2026,
+  title={Conscious Cognitive Architecture (CCA) Ver. 1.0: A Language-Grounded Multimodal Memory-Field Architecture for Cognitive State Stabilization and Coherent Response Formation},
   author={ao},
   journal={GitHub Repository},
   year={2026}
@@ -146,8 +157,8 @@ If you use or reference CCA in your work, please cite the repository paper as fo
 
 ## Summary
 
-CCA is best understood as a non-linear cognitive architecture for modeling how information becomes structured, stabilized, and expressed across multimodal memory processes. It combines sensory grounding, structured topological memory, phase coherence, and language-grounded response generation.
+CCA is best understood as a non-linear cognitive architecture for modeling how information becomes structured, stabilized, and expressed across multimodal memory processes. It combines sensory grounding, memory-field dynamics, and coherence-based candidate selection in a single conceptual framework.
 
-The repository is intended to serve as both a conceptual specification and a research scaffold for developing more dynamic, context-sensitive cognitive systems.
+The repository is intended to serve as both a conceptual specification and a research scaffold for developing more dynamic, context-sensitive cognitive systems. The architecture is intentionally versioned: language-grounded, situational-awareness, and affective variants can be developed under the same conceptual umbrella.
 
-It is not primarily a literal inference engine in the classical symbolic sense, but a model of how candidate states are organized into coherent configurations and how those configurations are transformed into interpretable outputs.
+It is not primarily a literal inference engine in the classical symbolic sense, but a model of how candidate states are organized into coherent configurations and how those configurations are transformed into meaningful response behavior.
