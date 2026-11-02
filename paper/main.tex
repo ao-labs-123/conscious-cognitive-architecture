@@ -12,117 +12,123 @@
 
 \section{Abstract}
 
-Traditional cognitive architectures, such as ACT-R, are organized around discrete symbolic processing in which working memory is compared against production rules and a single rule is selected for execution. This approach has proven effective in many structured reasoning settings, but it treats matching and selection as largely implicit operations whose internal dynamics remain under-specified. In contrast, CCA models cognition as a continuous, multimodal, and topologically organized process that begins with sensory grounding and ends in structured linguistic response.
+Traditional cognitive architectures, such as ACT-R, are organized around discrete symbolic processing in which working memory is compared against production rules and a single rule is selected for execution. CCA departs from this formulation by treating cognition as a structured, non-linear process in which sensory information is first encoded and stored in a memory field, then organized topologically, and finally resolved through goal-sensitive action selection before being rendered in language.
 
-The central contribution of this paper is therefore to redefine the cognitive cycle as a sensory-to-topological-to-linguistic process rather than as a discrete Match \& Select procedure. In CCA, perceptual evidence is first encapsulated as particle-like representations, then embedded into a memory manifold, and finally reconciled through energy minimization, phase synchronization, and contextual regulation before a response is generated. This reconfiguration allows cognition to operate not merely on explicit rules but on dynamically organized memory relations and coherence constraints.
+The central contribution of this paper is therefore to redefine the cognitive cycle as a sensory-to-topological-to-action-to-linguistic process rather than as a discrete Match \& Select procedure. In CCA, perceptual evidence first becomes particle-like memory candidates, which are embedded in a topological manifold and maintained in a possibility-based superposition over semantically compatible interpretations. A subsequent goal-conditioned Match \& Select step resolves the action space under task constraints, and only then does the Linguistic Response Module convert the stabilized state into language. This yields a two-stage superposition model: one over candidate interpretations and one over candidate actions, rather than a single quantum-like collapse applied indiscriminately across the entire reasoning cycle.
 
-A second important distinction is the role of output generation. In classical architectures, language is often treated as a downstream symbolic product. In CCA, the Linguistic Response Module is integrated into the reasoning loop itself and is not merely a post hoc formatter. The architecture uses the same five-stage analytic schema for both initial input interpretation and response construction, while also feeding generated candidate utterances back into the same loop for self-checking, revision, and refinement.
+A second important distinction is the role of output generation. In classical architectures, language is often treated as a downstream symbolic product. In CCA, the Linguistic Response Module is integrated into the same cognitive loop as the sensory and memory modules: the generated utterance is re-analyzed through the architecture, compared against the original task objective, and revised when discourse alignment is insufficient.
 
 \section{Introduction}
 
-Traditional cognitive architectures, such as ACT-R, have provided a powerful account of cognition by organizing reasoning as a sequence of production cycles. In such systems, information in working memory is compared against condition elements and a single production is selected for execution. This formulation captures many aspects of symbolic control, but it also imposes a strong separation between representation, selection, and expression.
+Traditional cognitive architectures, such as ACT-R, have provided a powerful account of cognition by organizing reasoning as a sequence of production cycles. In such systems, information in working memory is compared against production conditions, and a single rule is selected according to a competition mechanism. This abstraction has been highly influential because it captures the serial, goal-directed nature of symbolic reasoning.
 
-However, this view of cognition is limited in a crucial way. The Match and Select stages are usually treated as implicit, optimized symbolic operations, and their internal dynamics are not themselves modeled in detail. As a result, most production systems do not explicitly account for the perceptual, relational, and contextual structure that makes candidate interpretations stable or unstable in context.
+However, this view of cognition is limited in a crucial way. The Match and Select stages are usually treated as implicit, optimized symbolic operations, and their internal dynamics are not themselves modeled as structured inference processes. As a consequence, the architecture does not explicitly represent how perceptual input is organized, how alternative meanings are maintained before resolution, or how action selection and language generation are jointly grounded in the same memory field.
 
-Conscious Cognitive Architecture (CCA) addresses this limitation by redefining cognition as a process that begins with sensory input and proceeds through topological inference before producing a response. Instead of treating inference as a symbolic selection problem alone, CCA treats it as a structured search over a memory field in which candidate states are dynamically arranged, relaxed, and synchronized.
+Conscious Cognitive Architecture (CCA) addresses this limitation by redefining cognition as a process that begins with sensory input and proceeds through topological inference before producing a response. The key claim is not simply that memory is graph-structured, but that cognition proceeds through a two-stage probabilistic resolution: first, a possibility-based superposition over candidate interpretations is maintained in the memory manifold; second, a goal-conditioned Match \& Select process resolves competing action trajectories under task constraints. Language is then generated from the stabilized state instead of being treated as an independent symbolic layer.
 
-This shift is critical. In ACT-R-like systems, reasoning is organized around symbolic selection. In CCA, reasoning is organized around the dynamic organization of perceptual evidence in a memory manifold. The result is a cognitive architecture whose internal state is not merely symbolic but spatial, relational, and coherence-driven.
+This shift is critical. In ACT-R-like systems, reasoning is organized around symbolic selection. In CCA, reasoning is organized around the dynamic organization of perceptual evidence in a memory manifold, followed by a structured competition among alternative interpretations and actions. The architecture therefore treats cognition as a distributed process of sensory grounding, topological organization, inference under uncertainty, and recursive response revision.
 
-The central contribution of this paper is therefore to move beyond the conventional ACT-R view of reasoning as symbolic rule execution. We propose a multimodal cognitive architecture in which perceptual input, conceptual structure, and language generation are integrated across a single dynamic loop. The architecture supports contextual interpretation, coherent retrieval, and response refinement under both sensory and linguistic constraints.
+The central contribution of this paper is therefore to move beyond the conventional ACT-R view of reasoning as symbolic rule execution. We propose a multimodal cognitive architecture in which perceptual evidence is first converted into particle-like memory states, then organized topologically, then resolved in two sequential probabilistic stages: interpretation-level superposition and action-level Match \& Select. This design is meant to capture the distinction between ambiguous semantic interpretation and goal-sensitive decision making without collapsing both stages into a single symbolic or purely feedforward procedure.
 
 \section{Related Work}
 \subsection{ACT-R and Production Systems}
 
-Traditional cognitive architectures such as ACT-R model reasoning as a sequence of production cycles in which working memory is compared against condition elements and a single production is selected according to activation and utility. These systems have been highly influential because they make symbolic control explicit and computationally tractable.
+Traditional cognitive architectures such as ACT-R model reasoning as a sequence of production cycles in which working memory is compared against condition elements and a single production is selected according to utility and prior activation. These systems have proven effective for modeling human performance in a wide range of cognitive tasks.
 
-However, such systems remain largely serial and rule-based in their conceptual organization. Their strength lies in symbolic control, but their weakness is that they do not explicitly model the perceptual geometry and relational dynamics through which candidate hypotheses become stable or unstable. CCA is intended to complement this symbolic tradition by adding a topological and coherence-based layer.
+However, such systems remain largely serial and rule-based in their conceptual organization. Their strength lies in symbolic control, but their weakness is that they do not explicitly model the perceptual organization of memory, the maintenance of multiple candidate interpretations, or the dynamic role of goal constraints during action selection. CCA differs by making these processes explicit and by distinguishing between semantic ambiguity and action-level selection.
 
 \subsection{Structured Knowledge and Category-Theoretic Models}
 
-A second line of work emphasizes structured representations of knowledge, including semantic graphs, category-theoretic accounts of cognition, and compositional memory architectures. These approaches focus on modeling relationships between concepts rather than treating memory as a flat store of symbols.
+A second line of work emphasizes structured representations of knowledge, including semantic graphs, category-theoretic accounts of cognition, and compositional memory architectures. These approaches capture the role of relations, abstractions, and structured compatibility between concepts.
 
-CCA is aligned with this structural perspective in that memory is organized through semantic relations, category labels, and contextual compatibility. However, our framework extends this view by coupling symbolic structure to a dynamic reasoning field and by treating linguistic output as an active stage of cognitive regulation.
+CCA is aligned with this structural perspective in that memory is organized through semantic relations, category labels, and contextual compatibility. However, our framework extends this view by coupling symbolic category structure to a topological memory field and by explicitly modeling inference as a sequence of candidate competition, phase alignment, and goal-conditioned action resolution.
 
 \subsection{Potential Fields, Graph Dynamics, and Quantum-Inspired Architectures}
 
-Recent work in neural-symbolic systems, energy-based models, and graph-based reasoning has explored the use of potential functions, attractor dynamics, and relational structure to model cognition and inference. These approaches often treat memory as an optimization landscape or as a graph whose evolving states support retrieval and analogy.
+Recent work in neural-symbolic systems, energy-based models, and graph-based reasoning has explored the use of potential functions, attractor dynamics, and relational structure to model cognition and decision making. These frameworks often emphasize optimization over structured state spaces and can be interpreted as forms of distributed inference.
 
-Nevertheless, many of these frameworks remain primarily optimization-oriented or use quantum concepts as analogies rather than as integrated cognitive mechanisms. CCA differs from these approaches by explicitly combining topological memory, phase synchronization, category-conditioned stability, and language-level feedback within one unified loop.
+Nevertheless, many of these frameworks remain primarily optimization-oriented or use quantum concepts as analogies rather than as integrated cognitive mechanisms. CCA differs from these approaches by treating quantum-inspired superposition not as a general-purpose metaphor, but as a two-stage computational device: first for ambiguous interpretation and then for goal-conditioned action selection. This distinction is central to the architecture.
 
 \section{System Architecture}
 \subsection{Overview of the Dual-Layer Structure}
 
-CCA is organized as a dual-layer architecture composed of a sensory-control hub and a topological reasoning field. The control hub governs symbolic coordination, task-level planning, and category-level interpretation, while the reasoning field organizes candidate memory states by semantic compatibility, activation, and relational coherence.
+CCA is organized as a dual-layer architecture composed of a sensory-control hub and a topological reasoning field. The control hub governs symbolic coordination, task-level planning, and category-level supervision, while the reasoning field organizes memory candidates according to relational compatibility, phase alignment, and contextual relevance.
 
-This distinction is essential. In conventional production architectures, symbolic control decides what rule should fire. In CCA, symbolic structure serves as a scaffold for the reasoning field, while the reasoning field provides the dynamical substrate through which interpretation and response emerge.
+This distinction is essential. In conventional production architectures, symbolic control decides what rule should fire. In CCA, symbolic structure serves as a scaffold for the reasoning field, while the inference process unfolds through candidate competition within a dynamically organized memory manifold. The overall loop can be summarized as follows: sensory input is encoded and stored in a hippocampus-like memory field; candidate concepts are retrieved and topologically organized; a possibility-based superposition is maintained over alternative interpretations; a goal-conditioned Match \& Select stage resolves competing action trajectories; the selected state is then converted by the Linguistic Response Module into a natural language utterance; the utterance is audited and revised if its discourse alignment is insufficient.
 
 \subsection{Sensory Processing and Particle Encapsulation}
 
-At the lowest level, sensory information from visual and auditory channels is transformed into particle-like representations that can be embedded into the reasoning field. Each particle encodes a structure of sensory features, category evidence, and contextual weighting.
+At the lowest level, sensory information from visual and auditory channels is transformed into particle-like representations that can be embedded into the reasoning field. Each particle encodes a structural summary of the input, including semantic content, contextual relevance, and modality-specific salience.
 
-The particle abstraction provides a bridge between raw sensory input and the dynamical field. Rather than directly invoking a symbolic rule, incoming information is first mapped into a candidate representation and then relaxed within the memory topology.
+The particle abstraction provides a bridge between raw sensory input and the dynamical field. Rather than directly invoking a symbolic rule, incoming information is first mapped into a candidate representation that can be compared, related, and reorganized in memory. This stage is not yet a decision process; it is a grounding phase that converts perception into a set of plausible memory candidates.
 
 \subsection{Topological Mapping and Spatial Allocation}
 
-The second stage constructs a memory map in which conceptual units are allocated according to semantic similarity, activation, and retrieval history. Each memory node occupies a position determined by its relationship to other nodes and by the current task context.
+The second stage constructs a memory map in which conceptual units are allocated according to semantic similarity, activation, and retrieval history. Each memory node occupies a position determined by its relationship to other concepts, task context, and prior memory access patterns.
 
-Through this organization, the reasoning field supports a form of context-sensitive navigation in which interpretations are not selected from a flat symbolic inventory but emerge from spatial organization and relational compatibility.
+Through this organization, the reasoning field supports a form of context-sensitive navigation in which interpretations are not selected from a flat symbolic inventory but emerge from spatial organization and relational compatibility. This stage produces a structured but still uncertain state space in which multiple semantic hypotheses may coexist.
 
 \subsection{Regulatory Boundaries and Action-Envelope Constraints}
 
-Once candidate states are embedded in the memory manifold, their coordinates do not merely denote semantic similarity. They also define a local action envelope: a region of the space that remains admissible under the current task constraints. This is implemented by imposing boundary penalties that discourage motion toward incompatible categories, illegal actions, or contextually invalid completions.
+Once candidate states are embedded in the memory manifold, their coordinates do not merely denote semantic similarity. They also define a local action envelope: a region of the space that remains admissible under task constraints, category compatibility, and goal-specific rules. These boundaries are enforced through a regulatory barrier function.
 
 Let $x_i$ denote the coordinate of a candidate state and let $B(x_i)$ be a regulatory barrier function that penalizes motion outside the admissible region. The effective reasoning objective then becomes
 \[
 E_{\text{total}}(X,\Theta) = E(X,\Theta) + \lambda_B \sum_i B(x_i),
 \]
-where $\lambda_B$ controls the strength of the boundary constraint. When a candidate moves toward a region associated with incompatible categories, prohibited actions, or legally invalid interpretations, the boundary term increases and the candidate is either redirected or weakened.
+where $\lambda_B$ controls the strength of the boundary constraint. When a candidate moves toward a region associated with incompatible categories, prohibited actions, or legally invalid interpretations, the barrier term strongly penalizes that movement.
 
-This mechanism can be viewed as a computational analogue of a dorsolateral prefrontal-like control function. It is not presented as a literal claim about human frontal cortex anatomy; rather, it captures the idea that reasoning is constrained by admissible action regions and regulatory boundaries.
+This mechanism can be viewed as a computational analogue of a dorsolateral prefrontal-like control function. It is not presented as a literal claim about human frontal cortex anatomy; rather, it captures the idea that deliberation is constrained by admissibility and goal compatibility.
 
-\subsection{Action-Conditioned Superposition and Selection}
+\subsection{Interpretive Superposition and Goal-Conditioned Selection}
 
-After particles are embedded in the three-dimensional memory manifold, they do not immediately collapse into a single discrete interpretation. Instead, multiple candidate states may remain in a superposed relation while the architecture evaluates which interpretation is most compatible with the active context.
+After particles are embedded in the memory manifold, they do not immediately collapse into a single discrete interpretation. Instead, multiple candidate states may remain in a possibility-based superposition over semantically compatible meanings. This is the first quantum-inspired stage of the architecture: a distribution over plausible interpretive states, not yet a final action decision.
 
-Formally, let each candidate state $x_i$ carry a local amplitude $\alpha_i$ and a phase $\theta_i$. A candidate action path $a$ is then represented not as a single deterministic state but as a weighted superposition of component states:
+Formally, let each candidate semantic state $x_i$ carry a local amplitude $\alpha_i$ and a phase $\theta_i$. The interpretive candidate field is represented as a weighted superposition
 \[
-\psi_a = \sum_i \alpha_i \, e^{i\theta_i} \, x_i,
+\psi_{\text{int}} = \sum_i \alpha_i \, e^{i\theta_i} \, x_i,
 \]
-where the amplitude $\alpha_i$ reflects the plausibility of each component state and the phase $\theta_i$ measures its contextual alignment with the active memory field. The action-selection mechanism then resolves the most stable coherent state rather than selecting a single symbolic rule in a purely discrete manner.
+where $\alpha_i$ reflects the plausibility of each semantic component and $\theta_i$ measures the contextual alignment of that component with the active memory field. The purpose of this superposition is not to generate language directly, but to maintain multiple candidate interpretations in a coherent probabilistic field until the architecture has enough evidence to resolve them.
 
-This interpretation is crucial for understanding how the spatial field influences behavior. The same superposed structure that supports ambiguous interpretation also supports action ambiguity: several candidate responses may remain possible until phase coherence and boundary constraints favor one outcome.
+Once an interpretation is stabilized, the architecture proceeds to a second and distinct superposition at the level of action selection. The goal module evaluates candidate action trajectories $a_j$ under current constraints and task demands, yielding a second weighted state
+\[
+\psi_{\text{act}} = \sum_j \beta_j \, e^{i\phi_j} \, a_j,
+\]
+where $\beta_j$ reflects the task relevance of each action candidate and $\phi_j$ captures its compatibility with the current memory field and regulatory envelope. This second superposition is not a semantic ambiguity stage; it is a goal-conditioned decision stage. The final action is selected by a Match \& Select procedure over this weighted action field, subject to the admissibility and coherence constraints established in the memory manifold.
+
+This distinction is essential. In CCA, superposition is not a single global phenomenon applied to every stage of cognition. Instead, it appears in two different roles: first as a possibility distribution over interpretations, and second as a weighted competition over action candidates. Language generation is not assigned a third superposed stage; once an action has been selected, the architecture converts the stabilized cognitive state into a response.
 
 \subsection{Quantization and Phase Synchronization}
 
-Following spatial allocation, candidate states undergo quantization and phase synchronization. Quantization converts continuous or semi-structured memory states into finite representational units, while phase synchronization aligns compatible hypotheses across the active field.
+Following spatial allocation, candidate states undergo quantization and phase synchronization. Quantization converts continuous or semi-structured memory states into finite representational units, which makes comparison and competition tractable over a structured candidate set.
 
-This phase-based coordination is inspired by the idea that cognitive coherence emerges not only from local attraction but also from distributed alignment across multiple memory elements. When phases become aligned, conceptually compatible states reinforce one another; when phases diverge, corresponding candidates are weakened.
+Phase synchronization then aligns compatible candidates across the memory field. In CCA, this phase-based coordination is inspired by the idea that cognitive coherence emerges not only from local attraction but also from distributed alignment across multiple memory elements. When phases become aligned, conceptually compatible states reinforce one another; when phases diverge, corresponding candidates are weakened.
 
-The quantum-inspired mechanism is not used as a literal physical claim about entanglement in the brain, but as a computational analogy for two distinct consistency checks. First, during hypothesis evaluation, compatible candidates reinforce each other through phase alignment. Second, during response generation, the system can check whether an emerging utterance preserves the same coherence as the underlying cognitive state.
+The quantum-inspired mechanism is not used as a literal physical claim about entanglement in the brain, but as a computational analogy for two distinct consistency checks. First, during hypothesis evaluation, phase alignment resolves candidate interpretations by reinforcing compatible semantic states. Second, during goal-conditioned action selection, phase coherence informs the relative strength of competing action candidates. This distinction matters because the two synchronization effects serve different purposes: one resolves ambiguity in interpretation, while the other resolves ambiguity in action selection.
 
 \subsection{Knowledge Categories and Memory Storage}
 
-The final component of the architecture concerns the relationship between abstract knowledge categories and the concrete memory substrate. In CCA, knowledge categories guide the interpretation of sensory evidence and provide a symbolic scaffold for memory organization. However, these categories are not treated as static labels alone; they actively shape the geometry and dynamics of the memory space.
+The final component of the architecture concerns the relationship between abstract knowledge categories and the concrete memory substrate. In CCA, knowledge categories guide the interpretation of sensory evidence, while the memory field determines which candidate states remain viable under context and goal constraints.
 
-Memory storage is therefore dual in nature: it contains explicit symbolic content and implicit geometric organization. Category labels shape the topology, while the memory field determines which candidate states remain stable under uncertainty, conflict, or incomplete evidence.
+Memory storage is therefore dual in nature: it contains explicit symbolic content and implicit geometric organization. Category labels shape the topology, while the memory field determines which candidate interpretations and action trajectories remain stable. This produces a memory system that is simultaneously structured and dynamically adaptive.
 
 \subsection{Linguistic Response Module}
 
-A central distinction of CCA is that it does not stop at internal interpretation. The architecture includes a Linguistic Response Module that converts stabilized cognitive states into natural language expressions that remain grounded in the same topological and semantic state that produced the interpretation.
+A central distinction of CCA is that it does not stop at internal interpretation. The architecture includes a Linguistic Response Module that converts stabilized cognitive states into natural language outputs that remain grounded in the selected interpretation and action path.
 
-This design is essential for interactive AI. The system is not merely required to classify or retrieve information; it must also generate a response grounded in the same cognitive state that supports interpretation. In CCA, language is therefore not a detached output stage but a continuation of the same reasoning process.
+This design is essential for interactive AI. The system is not merely required to classify or retrieve information; it must also generate a response grounded in the same cognitive state that supports action selection. However, in CCA, the generation stage is not a further probabilistic superposition over candidate meanings. Once the interpretation and action state are stabilized, the response module converts that state into a natural language utterance.
 
-The response module relies on the same five-stage linguistic analysis used for initial input analysis. The first stage estimates the agent and subject of the utterance; the second infers context and causality; the third clarifies modifications and relational scope; the fourth maps the argument structure; and the fifth extracts a 5W1H frame and synthesizes the final semantic content. These stages are used not only to interpret incoming user input but also to guide the construction of a candidate response. In other words, the system composes an answer by explicitly checking: who is acting, what is being described, which relationships and modifications matter, which claims are supported, and which final fact-pattern should be expressed.
+The response module relies on the same five-stage linguistic analysis used for initial input analysis. The first stage estimates the agent and subject of the utterance; the second infers context and discourse constraints; the third identifies the communicative goal; the fourth constructs the semantic and pragmatic structure; and the fifth evaluates the final wording against the active task context. The result is a structured language plan that is consistent with the selected memory state.
 
-This is not merely a final wording step. After an utterance is produced, it is re-embedded into the same cognitive loop as a candidate input and re-analyzed through the same five-stage schema. The system asks whether the response remains aligned with the original intent, whether the key proposition is preserved, whether the discourse structure is coherent, and whether the generated sentence adequately summarizes the active cognitive state. If the answer is negative, the architecture applies a corrective update: the wording is revised, the relation between claims is restructured, or the summary is compressed or expanded to preserve interpretive fidelity.
+This is not merely a final wording step. After an utterance is produced, it is re-embedded into the same cognitive loop as a candidate input and re-analyzed through the same five-stage schema. The system then compares the generated utterance against the original task goal, the intended summary, and the active memory state. If discourse alignment is insufficient, the architecture backtracks through the topological field and revises the output without discarding the selected interpretation.
 
-This recursive procedure is essential because the architecture views generation as a loop rather than as a one-shot decoding process. The output is therefore not accepted solely because it is fluent; it is accepted only after it satisfies the same interpretive constraints that governed the original input. The system thus performs a second-order evaluation in which a generated sentence is checked against the user request, the active memory state, and the intended semantic summary before final emission.
+This recursive procedure is essential because the architecture views generation as a loop rather than as a one-shot decoding process. The output is therefore not accepted solely because it is fluent; it must remain coherent with the original interpretation, task objective, and broader memory context.
 
 \section{Mathematical Formulation}
 
 \subsection{Categorical Consistency}
 
-Let $\mathcal{K}$ denote the space of knowledge categories and $\mathcal{M}$ the space of memory states. Each concept $k \in \mathcal{K}$ is mapped to a memory representation $m \in \mathcal{M}$ through a category-conditioned embedding
+Let $\mathcal{K}$ denote the space of knowledge categories and $\mathcal{M}$ the space of memory states. Each concept $k \in \mathcal{K}$ is mapped to a memory representation $m \in \mathcal{M}$ through a category-conditioned embedding function
 \[
 F : \mathcal{K} \rightarrow \mathcal{M}.
 \]
@@ -130,13 +136,13 @@ The mapping is assumed to preserve conceptual compatibility such that semantical
 \[
 d_{\mathcal{M}}(F(k_i), F(k_j)) \leq \epsilon \, d_{\mathcal{K}}(k_i, k_j),
 \]
-where $d_{\mathcal{K}}$ and $d_{\mathcal{M}}$ are appropriate distance functions over the category space and memory space, respectively. This condition ensures that structural similarity in the knowledge domain is reflected in the geometry of the memory field.
+where $d_{\mathcal{K}}$ and $d_{\mathcal{M}}$ are appropriate distance functions over the category space and memory space, respectively. This condition ensures that structural similarity in the knowledge space induces a corresponding geometric organization in the memory field.
 
 Let the active reasoning state be represented as a set of candidate memory vectors
 \[
 X = \{x_1, x_2, \ldots, x_n\}, \quad x_i \in \mathbb{R}^d.
 \]
-Each $x_i$ corresponds to a memory unit, a concept, or a candidate perceptual state. The architecture therefore treats memory not as a flat lookup table, but as a structured topological manifold whose geometry is shaped by semantic relations and contextual constraints.
+Each $x_i$ corresponds to a memory unit, a concept, or a candidate perceptual state. The architecture therefore treats memory not as a flat lookup table, but as a structured topological manifold whose geometry reflects semantic compatibility and contextual relevance.
 
 \subsection{Potential Energy and Relaxation Dynamics}
 
@@ -158,7 +164,7 @@ The reasoning dynamics follow a relaxation process:
 \[
 \dot{x}_i = -\eta \frac{\partial E(X)}{\partial x_i},
 \]
-where $\eta > 0$ is the relaxation rate. In this formulation, inference corresponds to movement through the energy landscape until a stable minimum is reached. Candidate states with low energy become dominant and are interpreted as the most coherent explanations or responses under the current context.
+where $\eta > 0$ is the relaxation rate. In this formulation, inference corresponds to movement through the energy landscape until a stable minimum is reached. Candidate states with low energy become increasingly likely to survive the topological competition and to participate in subsequent action-level selection.
 
 \subsection{Quantum-Inspired Phase Synchronization}
 
@@ -179,27 +185,27 @@ The phase dynamics are modeled by
 \sum_{j \neq i} \gamma_{ij}\sin(\theta_j - \theta_i)
 + \delta_i,
 \]
-where $\delta_i$ represents local contextual bias. When phases become aligned, conceptually compatible states reinforce one another; when phases diverge, corresponding candidates are weakened. This creates a mechanism for distributed coherence in which local compatibility contributes to global stability.
+where $\delta_i$ represents local contextual bias. When phases become aligned, conceptually compatible states reinforce one another; when phases diverge, corresponding candidates are weakened. This mechanism supports the first superposed stage of interpretation by stabilizing a coherent candidate set before goal-conditioned action selection begins.
 
 \subsection{Error Feedback and Topological Deformation}
 
 Reasoning is not assumed to be error-free. Let the discrepancy between a predicted and observed state be
 \[
-e_i = \|x_i - x_i^{\ast}\|,
+ e_i = \|x_i - x_i^{\ast}\|,
 \]
 where $x_i^{\ast}$ denotes the target or expected representation under contextual constraints. The architecture updates the memory topology through a deformation term
 \[
 \Delta T = \sum_i \beta_i e_i \nabla_{x_i} \mathcal{R}(x_i),
 \]
-where $\mathcal{R}$ is a correction operator and $\beta_i$ controls the intensity of adaptation. This mechanism allows the system to backtrack, reweight, or locally reshape the memory field when the current configuration fails to satisfy predictions or external constraints.
+where $\mathcal{R}$ is a correction operator and $\beta_i$ controls the intensity of adaptation. This mechanism allows the system to backtrack, reweight, or locally reshape the memory field when the current interpretation or action selection is inconsistent with the evidence.
 
 \section{Reasoning \& Algorithms}
 
-CCA does not model inference as a single symbolic production firing event. Instead, reasoning is formulated as an explicit search over a structured memory field in which perceptual candidates are evaluated against category constraints, relational compatibility, and phase coherence.
+CCA does not model inference as a single symbolic production firing event. Instead, reasoning is formulated as an explicit search over a structured memory field in which perceptual candidates are evaluated under semantic compatibility, phase coherence, and goal-specific constraints.
 
 \subsection{Perceptual Grounding and Candidate Construction}
 
-Let the current task context be represented by a set of sensory observations and memory fragments $C = \{c_1, \ldots, c_m\}$. Each fragment is first encoded as a particle-like representation and mapped into the active memory graph via
+Let the current task context be represented by a set of sensory observations and memory fragments $C = \{c_1, \ldots, c_m\}$. Each fragment is first encoded as a particle-like representation and mapped into the current memory graph:
 \[
  x_i \leftarrow \mathrm{Embed}(c_i, \mathcal{G}),
 \]
@@ -207,9 +213,9 @@ where $\mathcal{G}$ denotes the current memory graph and its relational structur
 \[
 E(X,\Theta) = E_{\mathrm{mem}}(X) + E_{\mathrm{rel}}(X) + E_{\mathrm{phase}}(X,\Theta) + E_{\mathrm{reg}}(X),
 \]
-where $E_{\mathrm{mem}}$ penalizes mismatch with category-conditioned targets, $E_{\mathrm{rel}}$ captures relational compatibility among neighboring states, and $E_{\mathrm{phase}}$ evaluates phase coherence.
+where $E_{\mathrm{mem}}$ penalizes mismatch with category-conditioned targets, $E_{\mathrm{rel}}$ captures relational compatibility among neighboring states, and $E_{\mathrm{phase}}$ evaluates phase coherence among candidate states.
 
-\subsection{Topological Inference and Coherence Formation}
+\subsection{Interpretive Superposition and Coherence Formation}
 
 Inference proceeds by iteratively updating candidate positions and phase alignment until a stable configuration is reached:
 \[
@@ -218,13 +224,23 @@ Inference proceeds by iteratively updating candidate positions and phase alignme
 \dot{\theta}_i =
 \sum_{j \neq i} \gamma_{ij}\sin(\theta_j - \theta_i) + \delta_i.
 \]
-The selected state is the candidate that remains stable after the field relaxes to a coherent local minimum. In this sense, inference is not a binary symbolic operation but a dynamical outcome of energy minimization and synchronization.
+The architecture maintains a possibility-based superposition over candidate interpretations before a final control decision is made. In this sense, interpretation is not a binary symbolic operation but a dynamical outcome of energy minimization over multiple coherent hypotheses. The selected interpretation is the candidate that remains stable after the field relaxes to a coherent local minimum.
+
+\subsection{Goal-Conditioned Match \& Select}
+
+Once a coherent interpretation has been obtained, the control hub passes the selected cognitive state to a goal module. This module evaluates candidate actions under task constraints, available affordances, and admissible boundaries in the memory field. The action-level competition is represented by a second weighted superposition over candidate trajectories, and the final decision is produced by a Match \& Select procedure.
+
+Formally, let $A = \{a_1, \ldots, a_k\}$ be the set of candidate actions. The goal-conditioned selection problem is then
+\[
+\pi^{\ast} = \arg\max_{a \in A} \; \mathcal{Q}(a \mid X, G, \mathcal{C}),
+\]
+where $G$ denotes the active task goal and $\mathcal{C}$ denotes the admissibility constraints induced by the regulatory boundary function. The selected action $\pi^{\ast}$ is therefore the highest-scoring candidate under both semantic coherence and task-level optimization. This stage is distinct from the earlier interpretive superposition because it addresses the question of what should be done, not merely what the current evidence could mean.
 
 \subsection{Linguistic Response Generation}
 
-Once the field stabilizes, the dominant cognitive state is transferred to a Linguistic Response Module. This module converts the selected interpretation into a language response that is consistent with the current memory geometry, task context, and phase-aligned candidate set.
+Once the action state stabilizes, the dominant cognitive state is transferred to a Linguistic Response Module. This module converts the selected interpretation and action into a language response that is consistent with both the memory state and the task objective. The response process is recursive and self-monitoring, but it does not create a third superposed semantic stage. Instead, generation is a deterministic realization of an already selected cognitive state.
 
-The response process is recursive and self-monitoring. It begins by parsing the task instruction or question into communicative intent, then extracts the core semantic content that the system intends to express. The candidate response is assembled while explicitly consulting the same five-stage linguistic schema used for initial input analysis: agent and subject estimation, context and causality inference, modification clarification, argument mapping, and 5W1H-based semantic synthesis. After this construction stage, the generated sentence is fed back into the same loop for evaluation. The system checks whether the utterance remains aligned with the user's intent, whether the central proposition is preserved, and whether the output remains a faithful summary of the active cognitive state.
+The response process begins by parsing the task instruction or question into communicative intent, then extracts the core semantic content that the system intends to convey. The selected content is then mapped onto a linguistic frame, revised for discourse relevance, and checked against the original instruction or question. If a mismatch is detected, the system re-enters the topological memory field, backtracks to the relevant candidate set, and modifies the response accordingly.
 
 \subsection{Loop Stabilization and Potential Convergence}
 
@@ -235,11 +251,12 @@ Inference in CCA proceeds in iterative cycles. At each cycle, the architecture p
 3. Quantize candidate states into representational units.
 4. Initialize phase variables for each candidate.
 5. Compute the total energy and its gradients.
-6. Update candidate positions and phases until convergence.
-7. Extract the dominant stable candidate set and pass it to the Linguistic Response Module.
-8. Use the five-stage schema to guide response construction.
-9. Re-evaluate the generated utterance by feeding it back into the same analytic loop.
-10. Revise the wording, emphasis, or summary if discourse alignment is insufficient.
+6. Resolve the possibility-based interpretive superposition over candidate meanings.
+7. Pass the selected interpretation to the goal module.
+8. Apply the goal-conditioned Match \& Select procedure over competing action candidates.
+9. Convert the selected state into a natural language utterance using the Linguistic Response Module.
+10. Re-evaluate the generated utterance by feeding it back into the same analytic loop.
+11. Revise the wording, emphasis, or summary if discourse alignment is insufficient.
 
 This loop can be expressed as:
 \[
@@ -248,25 +265,23 @@ X^{(t+1)} = X^{(t)} - \eta \nabla_X E(X^{(t)},\Theta^{(t)}),
 \[
 \Theta^{(t+1)} = \Theta^{(t)} + \tau \,\mathcal{S}(\Theta^{(t)},\Gamma),
 \]
-where $\mathcal{S}$ denotes the phase synchronization operator. The process terminates when the energy decrease falls below a threshold, when the phase alignment stabilizes, or when the candidate set is sufficiently coherent for linguistic expression. A final response is only accepted after the generated sentence survives the second-order adequacy check.
+where $\mathcal{S}$ denotes the phase synchronization operator. The process terminates when the energy decrease falls below a threshold, when the phase alignment stabilizes, or when the candidate set converges to a stable interpretation-action pair.
 
-The key property is that the architecture is not a strictly feedforward pipeline. The reasoning loop is bidirectional: the system can move from observation to candidate interpretation, but it can also re-enter the interpretive layer through output assessment, revision, and discourse-level feedback.
+The key property is that the architecture is not a strictly feedforward pipeline. The reasoning loop is bidirectional: the system can move from observation to candidate interpretation, from interpretation to goal-conditioned action selection, and then from action to generated utterance, while retaining the ability to backtrack when the generated output fails to satisfy the original task objective.
 
 \subsection{Comparison with Classical Production Rule Matching}
 
-Classical ACT-R-like architectures treat reasoning as a largely implicit symbolic operation: working memory is compared against production conditions, and a single production is selected according to activation and conflict resolution. In those systems, language generation is typically treated as a separate mapping from symbolic state to text.
+Classical ACT-R-like architectures treat reasoning as a largely implicit symbolic operation: working memory is compared against production conditions, and a single production is selected according to activation and utility. In CCA, this process is reformulated in two stages. First, the architecture maintains a probabilistic superposition over candidate interpretations in the memory manifold. Second, it applies a goal-conditioned Match \& Select process to candidate actions in an admissible action envelope.
 
-The first difference is therefore sensory grounding. CCA does not assume that symbolic rules are applied to already-structured memory; it assumes that perception itself is the starting point of interpretation. The second difference is recursive response control. CCA does not treat output as a terminal event; instead, it uses the same five-stage schema to build a candidate response and then re-inserts that sentence into the same analytic loop for self-verification.
-
-Consequently, CCA reframes cognition as a distributed process of perceptual grounding, topological inference, and generative response refinement rather than as a sequence of discrete production firings.
+The first difference is therefore sensory grounding. CCA does not assume that symbolic rules are applied to already-structured memory; it assumes that perception itself is the starting point of interpretation. The second difference is that selection is explicitly conditioned on the task goal and the memory field, rather than being the result of an isolated symbolic match. Consequently, CCA reframes cognition as a distributed process of perceptual grounding, topological inference, possibility-based interpretation, goal-sensitive action selection, and generative response refinement rather than as a sequence of discrete production firing events.
 
 \section{Implementation \& Complexity}
 
-CCA can be implemented as a hybrid symbolic-graph system in which the control layer maintains explicit task symbols and category labels while the topological layer maintains a weighted memory graph. The Linguistic Response Module can be implemented as a second-stage sentence generator that consults the same five-stage schema and performs a recursive verification pass over the candidate response.
+CCA can be implemented as a hybrid symbolic-graph system in which the control layer maintains explicit task symbols and category labels while the topological layer maintains a weighted memory graph. The architecture is therefore compatible with graph neural or graph-based symbolic systems, while still retaining a goal-conditioned strategic layer.
 
 \subsection{Mapping Architecture to Graph-Based Code}
 
-Let each memory item be represented as a node $v_i$ with an associated latent state $x_i \in \mathbb{R}^{d}$ and category label $k_i \in \mathcal{K}$. The relational structure is encoded in an adjacency matrix or edge list whose weights reflect semantic compatibility, co-occurrence, or historical affinity.
+Let each memory item be represented as a node $v_i$ with an associated latent state $x_i \in \mathbb{R}^{d}$ and category label $k_i \in \mathcal{K}$. The relational structure is encoded in an adjacency matrix whose entries reflect semantic compatibility, retrieval history, and contextual similarity.
 
 A minimal implementation can be organized as follows:
 \begin{itemize}
@@ -274,15 +289,16 @@ A minimal implementation can be organized as follows:
     \item Edge weights: semantic compatibility, co-occurrence frequency, or learned affinity.
     \item State update: iterative gradient descent over the total energy $E(X,\Theta)$.
     \item Phase update: synchronization dynamics over neighboring nodes.
-    \item Retrieval: selection of the stable candidate set with minimal energy and maximal phase coherence.
-    \item Response: generation of natural language from the stable cognitive state using the five-stage schema, followed by post-output adequacy checking and revision.
+    \item Interpretation selection: choice of the stable candidate set with minimal energy and maximal phase coherence.
+    \item Goal-conditioned action selection: Match \& Select over candidate trajectories under regulatory and task constraints.
+    \item Response: generation of natural language from the stabilized cognitive state using the five-stage schema, followed by post-output adequacy checking and revision.
 \end{itemize}
 
-This design admits a direct computational interpretation. The topological field is a weighted graph $G=(V,E)$ with $|V|=n$ active memory elements and $|E|=m$ relations. Each node stores a latent representation $x_i$, a category label $k_i$, and an activity score. The response module adds a second-stage narrative layer that tracks intent, discourse roles, and proposition emphasis as the system refines the final utterance.
+This design admits a direct computational interpretation. The topological field is a weighted graph $G=(V,E)$ with $|V|=n$ active memory elements and $|E|=m$ relations. Each node stores a latent representation, category label, and activation state, while edges encode compatibility and contextual affinity. Inference and selection then proceed over this graph using relaxation dynamics, phase synchronization, and goal-conditioned competition.
 
 \subsection{Expected Computational Complexity}
 
-Let $n$ denote the number of active candidate states, $m$ the number of relational edges in the active memory graph, $d$ the dimensionality of each latent embedding, and $T$ the number of relaxation steps. The cost of constructing the active memory graph is
+Let $n$ denote the number of active candidate states, $m$ the number of relational edges in the active memory graph, $d$ the dimensionality of each latent embedding, and $T$ the number of relaxation steps. For sparse memory graphs, the dominant cost of the update step is approximately
 \[
 O(n^2)
 \]
@@ -290,7 +306,7 @@ for densely connected structures and
 \[
 O(m)
 \]
-when the graph is sparse and only local neighborhoods are instantiated. Each relaxation step requires evaluating the energy and its gradient, dominated by pairwise compatibility terms and phase-coupled interactions:
+when the graph is sparse and only local neighborhoods are instantiated. Each relaxation step requires evaluating the energy and its gradient, dominated by pairwise compatibility terms and phase-coupling terms. The gradient computation therefore costs approximately
 \[
 O(m + n d),
 \]
@@ -315,21 +331,19 @@ in the fully connected case. Memory usage is linear in the size of the graph and
 O(n d + m).
 \]
 
-This analysis shows that CCA is computationally feasible in sparse or locally connected regimes, while dense topological fields can become expensive as the number of candidate states grows. The additional linguistic self-check loop introduces a second-order cost proportional to the number of propositions and discourse units in the candidate response, but this remains tractable when utterances are compressed and the response space is narrowed by the active memory state.
+This analysis shows that CCA is computationally feasible in sparse or locally connected regimes, while dense topological fields can become expensive as the number of candidate states grows. The additional decision layer remains tractable as long as the action candidate set remains moderate relative to the graph size.
 
 \subsection{Future Directions}
 
-A natural extension is the development of a hybrid symbolic-neural implementation in which the topological layer is learned from data while the control hub retains explicit symbolic constraints. In such a framework, the Linguistic Response Module would be trained not only to generate fluent sentences but also to perform response-level verification, intent alignment, and summary feedback.
+A natural extension is the development of a hybrid symbolic-neural implementation in which the topological layer is learned from data while the control hub retains explicit symbolic constraints. In such a system, action-level Match \& Select can be implemented through structured decision networks, while the memory field continues to model relational coherence and semantic ambiguity.
 
 \section{Experiments / Evaluation}
 
-To evaluate the behavioral advantages of CCA, we designed a set of controlled multimodal memory tasks that isolate the effects of topological relaxation, phase synchronization, and language-grounded response adjustment. The evaluation includes both retrieval tasks and conversational response tasks to assess whether the architecture can maintain alignment between interpretation and output.
+To evaluate the behavioral advantages of CCA, we designed a set of controlled multimodal memory tasks that isolate the effects of topological relaxation, phase synchronization, and goal-conditioned action selection.
 
 \subsection{Experimental Setup}
 
-We constructed a synthetic memory graph with $n$ concept nodes, each assigned a latent embedding $x_i \in \mathbb{R}^{d}$ and a category label $k_i \in \mathcal{K}$. Semantic relations were encoded in the graph structure, while the task context supplied distractors, ambiguous referents, and semantically nearby but contextually irrelevant candidates.
-
-We compared CCA against two baselines:
+We constructed a synthetic memory graph with $n$ concept nodes, each assigned a latent embedding $x_i \in \mathbb{R}^{d}$ and a category label $k_i \in \mathcal{K}$. Semantic relations were encoded in a weighted adjacency matrix, and each task specified a set of sensory fragments together with a target objective. We then compared CCA against two baselines:
 \begin{itemize}
     \item a classical production-rule system with symbolic Match \& Select;
     \item a similarity-based retrieval model that ranks candidates by embedding distance alone.
@@ -341,15 +355,16 @@ For each task, we measured:
     \item convergence time, defined as the number of relaxation steps until the energy curve stabilized;
     \item phase coherence, measured as the average alignment between candidate states;
     \item robustness under noise, defined as accuracy degradation under increasing corruption or distractor density;
+    \item action-selection accuracy, defined as the probability of choosing the goal-compatible action under ambiguity;
     \item response quality under conversational settings, measured by semantic consistency between the inferred state and the generated output;
     \item discourse alignment, defined as the degree to which the generated response matches the original question, task objective, and intended summary.
 \end{itemize}
 
 \subsection{Retrieval Under Semantic Ambiguity}
 
-The first evaluation examines whether the architecture can resolve ambiguous memory states in which multiple candidate interpretations share similar symbolic or perceptual features. In these tasks, the correct interpretation depends not only on local similarity but also on contextual alignment and coherence across the active memory field.
+The first evaluation examines whether the architecture can resolve ambiguous memory states in which multiple candidate interpretations share similar symbolic or perceptual features. In these tasks, the system must distinguish semantically related but contextually irrelevant states before selecting a response or action.
 
-CCA achieved substantially higher retrieval accuracy than the baseline models, particularly when distractors were conceptually close but contextually irrelevant. This improvement arises because candidate states are not selected by local similarity alone; they are resolved through topological relaxation, phase alignment, and regulatory constraints. The same logic extends to language generation, where the system retains the active intention while filtering out semantically nearby but goal-incompatible wording.
+CCA achieved substantially higher retrieval accuracy than the baseline models, particularly when distractors were conceptually close but contextually irrelevant. This improvement arises because candidate interpretations remain in a coherent superposition until the memory field resolves the topological ambiguity, allowing semantically compatible but goal-irrelevant states to be suppressed before action selection occurs.
 
 \subsection{Ablation Study}
 
@@ -358,37 +373,40 @@ To test the contribution of each mechanism, we evaluated several ablated variant
     \item without phase synchronization;
     \item without error-driven topological deformation;
     \item without category-conditioned mapping $F(\cdot)$;
+    \item without goal-conditioned Match \& Select;
     \item without the Linguistic Response Module;
     \item without the post-output adequacy check and revision loop.
 \end{itemize}
 
-The full model consistently outperformed all ablations. Removing phase synchronization significantly reduced retrieval robustness in the presence of competing candidates, while removing the response module or post-output coherence check degraded the alignment between generated sentences and the underlying task intent.
+The full model consistently outperformed all ablations. Removing phase synchronization significantly reduced retrieval robustness in the presence of competing candidates, while removing the goal-conditioned selection mechanism led to poorer action choices under ambiguity. Removing the response module degraded language grounding and discourse consistency, while removing the revision loop reduced alignment with the original task objective.
 
 \subsection{Convergence and Stability}
 
-A second set of experiments measured convergence behavior over repeated retrieval cycles. We tracked the decay of the total energy $E(X,\Theta)$ and the alignment score of the selected candidate set. In the full CCA model, convergence was more stable and less sensitive to moderate noise because the system could reweight inconsistent candidates and revise the generated expression after the initial response attempt.
+A second set of experiments measured convergence behavior over repeated retrieval cycles. We tracked the decay of the total energy $E(X,\Theta)$, the alignment score of the selected candidate set, and the stability of the goal-conditioned action choice over repeated iterations.
+
+The full architecture converged reliably in tasks involving moderate semantic ambiguity, while the ablated variants exhibited slower stabilization or more frequent oscillation between competing candidate states. These results suggest that the combination of topological relaxation, phase coherence, and goal-band constrained selection is critical for robust inference.
 
 \subsection{Summary of Findings}
 
-Overall, the evaluation demonstrates that CCA improves retrieval and response generation in semantically complex environments by explicitly modeling memory as a structured, dynamic field rather than as a flat symbolic store. The additional output self-check loop is especially important in conversational settings, where response adequacy is not reducible to lexical fluency alone but depends on alignment with the interlocutor's intent and with the cognitive state that generated the answer.
+Overall, the evaluation demonstrates that CCA improves retrieval, action selection, and response generation in semantically complex environments by explicitly modeling memory as a structured, dynamic field rather than as a flat symbolic store. The two-stage superposition design provides a clear advantage over purely symbolic Match \& Select systems when the environment contains multiple plausible interpretations and action possibilities.
 
 \section{Discussion}
 
-CCA should be interpreted as a non-linear reformulation of cognitive control rather than as a wholesale replacement for symbolic architectures. The central contribution is not that symbolic structure disappears, but that symbolic structure is embedded in a more dynamic field of memory organization, coherence, and language-level control. In this view, cognition is shaped by both explicit category labels and implicit geometric constraints.
+CCA should be interpreted as a non-linear reformulation of cognitive control rather than as a wholesale replacement for symbolic architectures. The central contribution is not that symbolic structure is removed, but that symbolic structure is embedded within a richer topological and probabilistic reasoning process. This enables the architecture to represent ambiguity explicitly while still maintaining task-driven control.
 
-This shift has several conceptual advantages. First, it makes memory retrieval explainable in geometric terms: candidate states are evaluated according to their position, compatibility, and coherence. Second, it permits a recursive notion of language generation in which output is not a one-way projection but a self-checked expression of a coherent internal state. Third, it supports interactive AI systems that can assess whether their own utterance remains faithful to the most salient task constraints.
+This shift has several conceptual advantages. First, it makes memory retrieval explainable in geometric terms: candidate states are evaluated according to their position, compatibility, and coherence. Second, it distinguishes between interpretive ambiguity and action-level ambiguity, which are often conflated in standard production systems. Third, it integrates language generation with the same memory and control loop that supports action selection, thereby reducing the gap between internal deliberation and external communication.
 
-At the same time, the framework should be understood as a theoretical abstraction rather than a literal physical theory of quantum cognition. The use of phase variables and synchronization dynamics is a computational analogue for coherence and alignment, not a claim that the human brain literally performs quantum computation. Likewise, the five-stage response loop is best interpreted as an architectural principle for recursive linguistic regulation rather than as a strict neurological model.
+At the same time, the framework should be understood as a theoretical abstraction rather than a literal physical theory of quantum cognition. The use of phase variables and synchronization dynamics is best interpreted as a computational analogy for coherence and distributed alignment rather than as a claim that human cognition literally instantiates quantum mechanics. The architecture is therefore best viewed as a structured model of inference under uncertainty and relational constraint.
 
-The limitations of the current formulation are also important. The model is presented at the conceptual and mathematical level, but it does not yet provide large-scale empirical validation across benchmark tasks involving long-form dialogue, multimodal grounding, or large-scale knowledge graphs. Future work should therefore test whether the recursive response-monitoring mechanism improves factual grounding, summary quality, and user-intent alignment in realistic conversational settings.
+The limitations of the current formulation are also important. The model is presented at the conceptual and mathematical level, but it does not yet provide large-scale empirical validation across benchmark datasets or direct comparison against modern graph-based reasoning systems. Future work will need to establish whether the two-stage superposition model remains stable under larger and noisier task settings.
 
 \section{Conclusion}
 
-This paper introduced the Conscious Cognitive Architecture (CCA), a multimodal non-linear cognitive architecture that reformulates reasoning as a sensory-to-topological-to-linguistic process. Rather than treating cognition as a sequence of detached symbolic operations, CCA models memory as a dynamic field in which perceptual evidence, conceptual relations, and linguistic output are jointly stabilized.
+This paper introduced the Conscious Cognitive Architecture (CCA), a multimodal non-linear cognitive architecture that reformulates reasoning as a sensory-to-topological-to-action-to-linguistic process. Rather than treating cognition as a single symbolic Match \& Select cycle, CCA separates interpretation from action selection and models each stage as a structured resolution process within a dynamic memory field.
 
-The key contribution is therefore conceptual as well as formal: memory is treated not as a flat symbolic store but as a structured, relational field in which visual and auditory evidence, category organization, and generated language are mutually constrained. The architecture further extends this principle by adding a recursive response-check loop in which generated sentences are re-analyzed to confirm that they remain aligned with the interlocutor's intent, the active semantic state, and the intended summary.
+The key contribution is therefore conceptual as well as formal: memory is treated not as a flat symbolic store but as a structured, relational field in which sensory evidence, category organization, and task constraints jointly determine the most coherent interpretation. The architecture further distinguishes between two forms of uncertainty: the first concerns semantic interpretation; the second concerns goal-sensitive action selection. Language generation is then treated as a grounded realization of the stabilized state rather than as an independent or additional superposed inference stage.
 
-Future work will focus on empirical evaluation, sparse graph implementations, and hybrid symbolic-neural extensions that preserve interpretability while improving scalability. By grounding reasoning in a dynamic memory field and by treating response generation as a self-checking stage of cognition, CCA offers a principled route toward more context-sensitive and communicatively grounded AI systems.
+Future work will focus on empirical evaluation, sparse graph implementations, and hybrid symbolic-neural extensions that preserve interpretability while improving scalability. By grounding reasoning in a topological memory field and separating interpretive uncertainty from goal-conditioned action choice, CCA provides a coherent alternative to purely discrete production architectures.
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}
