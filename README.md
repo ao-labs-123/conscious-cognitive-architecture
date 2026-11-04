@@ -1,5 +1,6 @@
 # Conscious Cognitive Architecture (CCA)
-<img width="1016" height="1101" alt="image" src="https://github.com/user-attachments/assets/963a2b67-4f85-4eec-a60d-71bc99eaf7f3" />
+<img width="1018" height="1085" alt="image" src="https://github.com/user-attachments/assets/67fad84f-40a8-4319-87bf-99a4d158e43c" />
+
 
 Conscious Cognitive Architecture (CCA) is a multimodal, non-linear cognitive architecture for modeling how sensory input, memory structure, and contextual coherence interact to form stable internal states. The repository is intended as a conceptual specification and research scaffold rather than a finished production inference engine.
 
