@@ -115,6 +115,8 @@ This project is complemented by prototype repositories intended to demonstrate s
 - [topological-mapper](https://github.com/ao-labs-123/topological-mapper)
 - [spatial-allocation](https://github.com/ao-labs-123/spatial-allocation)
 
+These prototype repositories are intended for CCA Ver. 1.0 only; they do not represent implementations of Ver. 2.0 or the planned Ver. 3.0.
+
 These are companion repositories for incremental development rather than a complete end-to-end runtime yet.
 
 For deeper implementation notes, see [docs/IMPLEMENTATIONS.md](docs/IMPLEMENTATIONS.md).
