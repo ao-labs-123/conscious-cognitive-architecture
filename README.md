@@ -1,6 +1,5 @@
 # Conscious Cognitive Architecture (CCA)
-<img width="1018" height="1085" alt="image" src="https://github.com/user-attachments/assets/67fad84f-40a8-4319-87bf-99a4d158e43c" />
-
+<img width="1100" height="1316" alt="image" src="https://github.com/user-attachments/assets/987329a9-6090-4ace-a63e-83cbccfebf68" />
 
 Conscious Cognitive Architecture (CCA) is a multimodal, non-linear cognitive architecture for modeling how sensory input, memory structure, and contextual coherence interact to form stable internal states. The repository is intended as a conceptual specification and research scaffold rather than a finished production inference engine.
 
@@ -114,6 +113,7 @@ This project is complemented by prototype repositories intended to demonstrate s
 - [particle-encapsulation](https://github.com/ao-labs-123/particle-encapsulation)
 - [topological-mapper](https://github.com/ao-labs-123/topological-mapper)
 - [spatial-allocation](https://github.com/ao-labs-123/spatial-allocation)
+- [cognitive-wave-dynamics](https://github.com/ao-labs-123/cognitive-wave-dynamics)
 
 These prototype repositories are intended for CCA Ver. 1.0 only; they do not represent implementations of Ver. 2.0 or the planned Ver. 3.0.
 
