@@ -16,7 +16,7 @@ This paper presents Ver. 1.0 of the Conscious Cognitive Architecture (CCA), a la
 
 Traditional cognitive architectures, such as ACT-R, are organized around discrete symbolic processing in which working memory is compared against production rules and a single rule is selected for execution. CCA departs from this formulation by treating cognition as a structured, non-linear process in which sensory information is first encoded and stored in a memory field, then organized topologically, and finally resolved through goal-sensitive action selection before being rendered in language.
 
-The central contribution of this paper is therefore to redefine the cognitive cycle as a sensory-to-topological-to-interpretive-collapse-to-action-to-linguistic process rather than as a discrete Match \& Select procedure alone. In CCA, perceptual evidence first becomes particle-like memory candidates, which are embedded in a topological manifold and quantized into a finite candidate set. Multiple interpretations are temporarily maintained as a possibility-based superposition in the joint space of experience and knowledge. Contextual evidence then reweights this candidate field and induces a computationally defined collapse to a selected interpretation. A separate, goal-conditioned Match \& Select procedure evaluates candidate actions; action selection is not modeled as a second quantum-like superposition. Language generation is not a further superposed stage but a realization of the selected cognitive state. The collapse terminology is used as a computational analogy for evidence-conditioned commitment, not as a claim about literal quantum processes in the brain.
+The central contribution of this paper is therefore to redefine the cognitive cycle as a sensory-to-topological-to-interpretive-resolution-to-action-resolution-to-linguistic process rather than as a discrete Match \& Select procedure alone. In CCA, perceptual evidence first becomes particle-like memory candidates, which are embedded in a topological manifold and quantized into a finite candidate set. Multiple interpretations are temporarily maintained as a possibility-based superposition in the joint space of experience and knowledge, then updated by contextual evidence and resolved through a first computational collapse. A second, distinct superposition is formed over candidate actions and resolved through goal-conditioned evidence and constraints. Language generation is not a third superposed stage; it is a realization of the selected cognitive and action states. The two collapse stages are computational analogies for evidence-conditioned commitment, not claims about literal quantum processes in the brain.
 
 A second important distinction is the role of output generation. In classical architectures, language is often treated as a downstream symbolic product. In CCA, the Linguistic Response Module is integrated into the same cognitive loop as the sensory and memory modules: the generated utterance is re-analyzed through the architecture, compared against the original task objective, and revised when discourse alignment is insufficient.
 
@@ -26,37 +26,37 @@ Traditional cognitive architectures, such as ACT-R, have provided a powerful acc
 
 However, this view of cognition is limited in a crucial way. The Match and Select stages are usually treated as implicit, optimized symbolic operations, and their internal dynamics are not themselves modeled as structured inference processes. As a consequence, the architecture does not explicitly represent how perceptual input is organized, how alternative meanings are maintained before resolution, or how action selection and language generation are jointly grounded in the same memory field.
 
-Conscious Cognitive Architecture (CCA) addresses this limitation by redefining cognition as a process that begins with sensory input and proceeds through topological inference before producing a response. The key claim is that multiple candidate interpretations can be maintained after quantization and then updated by contextual evidence. This evidence-conditioned update concentrates support on compatible interpretations and commits the system to a selected state. A subsequent, goal-conditioned Match \& Select process resolves competing action trajectories. Language is then generated from the stabilized state instead of being treated as an independent symbolic layer.
+Conscious Cognitive Architecture (CCA) addresses this limitation by redefining cognition as a process that begins with sensory input and proceeds through topological inference before producing a response. The key claim is that multiple candidate interpretations can be maintained after quantization and updated by contextual evidence before a first commitment is made. A subsequent, distinct action candidate field is conditioned on the selected interpretation, active goal, and admissibility constraints, and is resolved through a second commitment. Language is then generated from the stabilized state instead of being treated as an independent symbolic layer.
 
-This shift is critical. In ACT-R-like systems, reasoning is organized around symbolic selection. In CCA, reasoning is organized around the dynamic organization of perceptual evidence in a memory manifold, followed by evidence-conditioned resolution of alternative interpretations and structured competition among actions. The architecture therefore treats cognition as a distributed process of sensory grounding, topological organization, inference under uncertainty, and recursive response revision.
+This shift is critical. In ACT-R-like systems, reasoning is organized around symbolic selection. In CCA, reasoning is organized around the dynamic organization of perceptual evidence in a memory manifold, followed by two sequential resolutions: first of interpretive ambiguity and then of action alternatives. The architecture therefore treats cognition as a distributed process of sensory grounding, topological organization, inference under uncertainty, and recursive response revision.
 
-The central contribution of this paper is therefore to move beyond the conventional ACT-R view of reasoning as symbolic rule execution. We propose a multimodal cognitive architecture in which perceptual evidence is first converted into particle-like memory states, then organized topologically and quantized, then maintained as a possibility-based interpretive field. Contextual evidence updates this field and produces a computational analogue of wave-packet collapse to a selected interpretation. Goal-sensitive action selection follows as a distinct Match \& Select operation. This design distinguishes semantic ambiguity from decision making without treating action selection as a second quantum-like collapse. Crucially, candidate interpretations are formed in the joint space of experiential evidence and abstract knowledge, where episodic traces, contextual priors, and conceptual structure jointly shape the candidate set.
+The central contribution of this paper is therefore to move beyond the conventional ACT-R view of reasoning as symbolic rule execution. We propose a multimodal cognitive architecture in which perceptual evidence is first converted into particle-like memory states, then organized topologically and quantized, then maintained as a possibility-based interpretive field. Contextual evidence updates this field and produces a first computational collapse to a selected interpretation. A second possibility-based field is formed over goal-conditioned action candidates and resolved by a distinct action-level collapse. This two-stage design distinguishes semantic ambiguity from decision making. Crucially, interpretive candidates are formed in the joint space of experiential evidence and abstract knowledge, where episodic traces, contextual priors, and conceptual structure jointly shape the candidate set.
 
 \section{Related Work}
 \subsection{ACT-R and Production Systems}
 
 Traditional cognitive architectures such as ACT-R model reasoning as a sequence of production cycles in which working memory is compared against condition elements and a single production is selected according to utility and prior activation. These systems have proven effective for modeling human performance in a wide range of cognitive tasks.
 
-However, such systems remain largely serial and rule-based in their conceptual organization. Their strength lies in symbolic control, but their weakness is that they do not explicitly model the perceptual organization of memory, the maintenance of multiple candidate interpretations, or the dynamic role of goal constraints during action selection. CCA differs by making these processes explicit and by distinguishing evidence-conditioned interpretation from action-level selection.
+However, such systems remain largely serial and rule-based in their conceptual organization. Their strength lies in symbolic control, but their weakness is that they do not explicitly model the perceptual organization of memory, the maintenance of multiple candidate interpretations, or the dynamic role of goal constraints during action selection. CCA differs by making these processes explicit and by distinguishing between interpretation-level and action-level resolution.
 
 \subsection{Structured Knowledge and Category-Theoretic Models}
 
 A second line of work emphasizes structured representations of knowledge, including semantic graphs, category-theoretic accounts of cognition, and compositional memory architectures. These approaches capture the role of relations, abstractions, and structured compatibility between concepts.
 
-CCA is aligned with this structural perspective in that memory is organized through semantic relations, category labels, and contextual compatibility. However, our framework extends this view by coupling symbolic category structure to a topological memory field and by explicitly modeling inference as candidate construction, contextual evidence update, and goal-conditioned action resolution.
+CCA is aligned with this structural perspective in that memory is organized through semantic relations, category labels, and contextual compatibility. However, our framework extends this view by coupling symbolic category structure to a topological memory field and by explicitly modeling inference as candidate competition, contextual updating, and two-stage resolution.
 
 \subsection{Potential Fields, Graph Dynamics, and Quantum-Inspired Architectures}
 
 Recent work in neural-symbolic systems, energy-based models, and graph-based reasoning has explored the use of potential functions, attractor dynamics, and relational structure to model cognition and decision making. These frameworks often emphasize optimization over structured state spaces and can be interpreted as forms of distributed inference.
 
-CCA uses a possibility-based representation as a computational analogy for retaining multiple candidate interpretations before evidence-conditioned commitment. The wave-packet-collapse terminology describes the update from a distribution over candidates to a selected interpretation; it does not assert physical quantum dynamics or entanglement in cognition. CCA distinguishes this interpretive update from the subsequent, conventional goal-conditioned selection among actions.
+CCA uses possibility-based superpositions as computational analogies for retaining alternatives before commitment. It distinguishes two such stages: an evidence-conditioned collapse over candidate interpretations and a goal-conditioned collapse over candidate actions. The terms ``superposition'' and ``collapse'' do not assert physical quantum states, measurement, or brain entanglement; they specify a formal procedure for representing weighted alternatives, updating their support, and committing to a selected candidate.
 
 \section{System Architecture}
 \subsection{Overview of the Dual-Layer Structure}
 
 CCA is organized as a dual-layer architecture composed of a sensory-control hub and a topological reasoning field. The control hub governs symbolic coordination, task-level planning, and category-level supervision, while the reasoning field organizes memory candidates according to relational compatibility, contextual relevance, and auxiliary phase-based coherence.
 
-This distinction is essential. In conventional production architectures, symbolic control decides what rule should fire. In CCA, symbolic structure serves as a scaffold for the reasoning field, while inference unfolds through candidate construction and evidence-conditioned resolution within a dynamically organized memory manifold. The overall loop can be summarized as follows: sensory input is encoded and stored in a hippocampus-like memory field; candidate concepts are retrieved and topologically organized; continuous or semi-structured states are quantized into candidate interpretations; a possibility-based interpretive field is updated by contextual evidence and computationally collapsed to a selected interpretation; a goal-conditioned Match \& Select stage resolves competing action trajectories; the selected state is converted by the Linguistic Response Module into a natural language utterance; and the utterance is audited and revised if its discourse alignment is insufficient.
+This distinction is essential. In conventional production architectures, symbolic control decides what rule should fire. In CCA, symbolic structure serves as a scaffold for the reasoning field, while inference unfolds through candidate competition within a dynamically organized memory manifold. The overall loop can be summarized as follows: sensory input is encoded and stored in a hippocampus-like memory field; candidate concepts are retrieved and topologically organized; continuous or semi-structured states are quantized; a possibility-based interpretation field is updated by contextual evidence and resolved by a first collapse; a distinct possibility-based action field is conditioned on the selected interpretation and goal and resolved by a second collapse; the selected state is converted by the Linguistic Response Module into a natural language utterance; and the utterance is audited and revised if its discourse alignment is insufficient.
 
 \subsection{Sensory Processing and Particle Encapsulation}
 
@@ -80,7 +80,7 @@ x_i = g(e_i, k_i), \qquad e_i \in \mathcal{E},\; k_i \in \mathcal{K},
 \]
 where $e_i$ denotes an experience-based memory fragment and $k_i$ denotes a knowledge-based categorical anchor. This joint construction is essential because the architecture does not assume that interpretation is driven by abstract knowledge alone or by raw sensory input alone. Instead, semantically plausible candidates are generated by the interaction between experiential evidence and conceptual structure.
 
-The candidate field is therefore context-dependent: the support for each interpretation depends jointly on the available experiential trace and the relevant conceptual frame. This dependence is represented through candidate features and contextual compatibility, without requiring an entanglement-like or non-separable quantum state.
+The candidate field is therefore context-dependent: the support for each interpretation depends jointly on the available experiential trace and the relevant conceptual frame. This dependence is represented through candidate features and contextual compatibility, without requiring a physical or literal quantum entanglement claim.
 
 \subsection{Regulatory Boundaries and Action-Envelope Constraints}
 
@@ -96,13 +96,13 @@ This mechanism can be viewed as a computational analogue of a dorsolateral prefr
 
 \subsection{Quantization and Contextual Coherence}
 
-Following spatial allocation, candidate states undergo quantization. Quantization converts continuous or semi-structured memory states into finite representational units, which makes comparison and evidence-conditioned updating tractable over a structured candidate set.
+Following spatial allocation, candidate states undergo quantization. Quantization converts continuous or semi-structured memory states into finite representational units, which makes comparison and competition tractable over a structured candidate set.
 
-The architecture may also use phase-based coherence as an auxiliary compatibility signal across memory elements. This signal can contribute to candidate scoring or to the evidence compatibility function, but it does not itself select an interpretation, constitute entanglement, or replace the evidence-conditioned update described below. The interpretation remains unresolved until contextual evidence has been evaluated.
+The architecture may also use phase-based coherence as an auxiliary compatibility signal across memory elements. This signal can contribute to candidate scoring or to evidence compatibility at either resolution stage, but it does not itself select an interpretation or action and does not replace the two explicit evidence-conditioned updates described below.
 
 \subsection{Interpretive Superposition and Evidence-Conditioned Collapse}
 
-After candidate states have been quantized, CCA may retain multiple candidate interpretations in a possibility-based superposition until contextual evidence is evaluated. This is the interpretive stage only; it is not an action-selection stage. Let $\{|x_i\rangle\}_{i=1}^{n}$ denote the quantized candidate states. Their normalized representation is
+After candidate states have been quantized, CCA may retain multiple candidate interpretations in a possibility-based superposition until contextual evidence is evaluated. This is the first resolution stage; it concerns what the current evidence means, not what action should be taken. Let $\{|x_i\rangle\}_{i=1}^{n}$ denote the quantized candidate states. Their normalized representation is
 \[
 |\psi_{\mathrm{int}}\rangle = \sum_{i=1}^{n} c_i |x_i\rangle,
 \qquad \sum_{i=1}^{n}|c_i|^2=1,
@@ -126,17 +126,38 @@ p_i' = \frac{|c_i|^2 L(y\mid x_i,C)}
 \]
 Thus, contextual evidence reweights the candidate field, increasing support for compatible interpretations and reducing support for incompatible ones.
 
-To represent commitment, the architecture selects $i^{\ast}=\arg\max_i p_i'$ for deterministic selection, or samples $i^{\ast}$ according to $p_i'$ when a stochastic policy is appropriate. The post-collapse state is then represented as
+To represent the first commitment, the architecture selects $i^{\ast}=\arg\max_i p_i'$ for deterministic selection, or samples $i^{\ast}$ according to $p_i'$ when a stochastic policy is appropriate. The post-collapse state is
 \[
-|\psi_{\mathrm{coll}}\rangle = |x_{i^{\ast}}\rangle.
+|\psi_{\mathrm{int,coll}}\rangle = |x_{i^{\ast}}\rangle.
 \]
 Here, ``collapse'' or ``wave-packet collapse'' denotes this computational transition from a distribution over candidate interpretations to a selected state. It is not a claim about literal quantum measurement or physical wave functions in the brain. If the evidence is insufficient to support a stable commitment, the system may retain the updated distribution and request or await further evidence.
 
-Once the interpretation has been selected, the control hub passes $x_{i^{\ast}}$ to the goal module. Let $A=\{a_1,\ldots,a_k\}$ be the candidate actions. Action selection is a separate goal-conditioned Match \& Select operation:
+\subsection{Goal-Conditioned Action Superposition and Collapse}
+
+After the interpretive collapse, the selected interpretation $x_{i^{\ast}}$ is passed to the goal module. Unlike the first stage, this second stage concerns which admissible action should be taken given the resolved interpretation, active goal, and regulatory constraints. Let $A=\{a_1,\ldots,a_k\}$ denote the quantized candidate action trajectories. Before commitment, the architecture represents them as a second weighted possibility field,
 \[
-\pi^{\ast} = \arg\max_{a\in A} \mathcal{Q}(a\mid x_{i^{\ast}},G,\mathcal{C}),
+|\psi_{\mathrm{act}}\rangle = \sum_{j=1}^{k} b_j |a_j\rangle,
+\qquad \sum_{j=1}^{k}|b_j|^2=1,
 \]
-where $G$ is the active task goal and $\mathcal{C}$ denotes the admissibility constraints induced by the regulatory boundary function. The action module evaluates candidates under task relevance and constraints; it does not form a second quantum-like superposition or invoke a second wave-packet collapse. Language generation then realizes the selected interpretation and action state as a response.
+where $b_j$ encodes the current support for action $a_j$.
+
+Let $G$ denote the active goal and $\mathcal{C}$ the admissibility constraints. An action-evaluation operator $N_{G,\mathcal{C},x^{\ast}}$ updates the action field according to goal relevance and admissibility. A diagonal form is
+\[
+N_{G,\mathcal{C},x^{\ast}} = \sum_j \sqrt{Q(a_j\mid x^{\ast},G,\mathcal{C})}\,|a_j\rangle\langle a_j|,
+\]
+where $Q(a_j\mid x^{\ast},G,\mathcal{C})\geq 0$ is a nonnegative compatibility score. The normalized post-update action weights are
+\[
+r_j = \frac{|b_j|^2 Q(a_j\mid x^{\ast},G,\mathcal{C})}
+{\sum_\ell |b_\ell|^2 Q(a_\ell\mid x^{\ast},G,\mathcal{C})},
+\]
+provided the denominator is nonzero. The second commitment selects $j^{\ast}=\arg\max_j r_j$ or samples according to $r_j$, yielding
+\[
+|\psi_{\mathrm{act,coll}}\rangle = |a_{j^{\ast}}\rangle,
+\qquad \pi^{\ast}=a_{j^{\ast}}.
+\]
+This is the second and distinct computational collapse. It is goal-conditioned action resolution, not semantic interpretation, and is not a claim about physical quantum measurement. If no action has sufficient support or admissibility, the system may defer action, seek further information, or retain the updated action distribution.
+
+The architecture therefore has two sequential superposition-and-collapse stages: an evidence-conditioned collapse over interpretations and a goal- and constraint-conditioned collapse over actions. The two stages operate on different candidate sets and use different evidence. Language generation is not a third superposition; it realizes the selected interpretation-action pair.
 
 \subsection{Knowledge Categories and Memory Storage}
 
@@ -146,9 +167,9 @@ Memory storage is therefore dual in nature: it contains explicit symbolic conten
 
 \subsection{Linguistic Response Module}
 
-A central distinction of CCA is that it does not stop at internal interpretation. The architecture includes a Linguistic Response Module that converts stabilized cognitive states into natural language outputs that remain grounded in the selected interpretation and action path.
+A central distinction of CCA is that it does not stop at internal interpretation. The architecture includes a Linguistic Response Module that converts the selected interpretation and action into natural language outputs that remain grounded in the resolved cognitive state and action path.
 
-This design is essential for interactive AI. The system is not merely required to classify or retrieve information; it must also generate a response grounded in the same cognitive state that supports action selection. However, in CCA, the generation stage is not a further probabilistic superposition over candidate meanings. Once the interpretation and action state are stabilized, the response module converts that state into a natural language utterance.
+This design is essential for interactive AI. The system is not merely required to classify or retrieve information; it must also generate a response grounded in the same cognitive state that supports action selection. However, in CCA, the generation stage is not a further probabilistic superposition over candidate meanings. Once the interpretation and action states are stabilized, the response module converts those states into a natural language utterance.
 
 The response module relies on the same five-stage linguistic analysis used for initial input analysis. The first stage estimates the agent and subject of the utterance; the second infers context and discourse constraints; the third identifies the communicative goal; the fourth constructs the semantic and pragmatic structure; and the fifth evaluates the final wording against the active task context. The result is a structured language plan that is consistent with the selected memory state.
 
@@ -219,7 +240,7 @@ The phase dynamics may be modeled by
 \dot{\theta}_i =
 \sum_{j \neq i} \gamma_{ij}\sin(\theta_j - \theta_i) + \delta_i,
 \]
-where $\delta_i$ represents local contextual bias. Phase alignment is treated as an auxiliary coherence signal that can inform candidate compatibility or evidence weighting. It is not interpreted as physical entanglement, and phase synchronization alone does not collapse the interpretive field; commitment occurs through the evidence-conditioned update and selection rule defined above.
+where $\delta_i$ represents local contextual bias. Phase alignment is treated as an auxiliary coherence signal that can inform candidate compatibility or evidence weighting at either resolution stage. It is not interpreted as physical entanglement, and phase synchronization alone does not collapse either field; commitment occurs through the two evidence-conditioned update and selection rules defined above.
 
 \subsection{Error Feedback and Topological Deformation}
 
@@ -258,21 +279,25 @@ Inference first updates candidate positions and, when used, auxiliary phase alig
 \dot{\theta}_i =
 \sum_{j \neq i} \gamma_{ij}\sin(\theta_j - \theta_i) + \delta_i.
 \]
-After quantization, the architecture represents alternative interpretations as a normalized candidate field $|\psi_{\mathrm{int}}\rangle=\sum_i c_i|x_i\rangle$. Contextual evidence $y$ updates its weights according to $p_i' \propto |c_i|^2 L(y\mid x_i,C)$, with normalization across candidates. The system then commits to a selected interpretation, for example by choosing the maximum-weight candidate or by sampling from the updated distribution. This evidence-conditioned commitment is called computational collapse; it is a formal selection/update rule and not a claim of physical quantum measurement. If evidence remains insufficient, the updated distribution can be retained rather than forcing a premature commitment.
+After quantization, alternative interpretations are represented as a normalized candidate field $|\psi_{\mathrm{int}}\rangle=\sum_i c_i|x_i\rangle$. Contextual evidence $y$ updates its weights according to $p_i' \propto |c_i|^2 L(y\mid x_i,C)$, with normalization across candidates. The system then commits to a selected interpretation, for example by choosing the maximum-weight candidate or by sampling from the updated distribution. This first evidence-conditioned commitment is called interpretive collapse; it is a formal selection/update rule and not a claim of physical quantum measurement. If evidence remains insufficient, the updated distribution can be retained rather than forcing a premature commitment.
 
-\subsection{Goal-Conditioned Match \& Select}
+\subsection{Goal-Conditioned Action Superposition and Match \& Select}
 
-Once an interpretation has been selected, the control hub passes the selected cognitive state to a goal module. This module evaluates candidate actions under task constraints, available affordances, and admissible boundaries in the memory field. Action selection is a goal-conditioned Match \& Select operation, not a second superposition or collapse stage.
+After interpretive collapse, the selected state $x^{\ast}$ conditions a second weighted field over candidate actions. For $A=\{a_1,\ldots,a_k\}$, let $|\psi_{\mathrm{act}}\rangle=\sum_j b_j|a_j\rangle$ denote this action-level superposition. The active goal and admissibility constraints update the action weights according to $r_j \propto |b_j|^2 Q(a_j\mid x^{\ast},G,\mathcal{C})$. Normalizing the weights and selecting the maximum or sampling from them produces a second, goal-conditioned computational collapse to an action $a^{\ast}$. This second resolution is distinct from interpretive collapse: it answers what action to take, not what the evidence means. The terms superposition and collapse here denote a weighted candidate representation and its computational resolution, not physical quantum dynamics.
 
-Formally, let $A = \{a_1, \ldots, a_k\}$ be the set of candidate actions and let $x^{\ast}$ be the selected interpretation. The goal-conditioned selection problem is
+Formally, let $A = \{a_1, \ldots, a_k\}$ be the set of candidate actions and let $x^{\ast}$ be the selected interpretation. The goal-conditioned action score is
 \[
-\pi^{\ast} = \arg\max_{a \in A} \; \mathcal{Q}(a \mid x^{\ast}, G, \mathcal{C}),
+\mathcal{Q}(a_j) = \mathcal{Q}(a_j \mid x^{\ast}, G, \mathcal{C}).
 \]
-where $G$ denotes the active task goal and $\mathcal{C}$ denotes the admissibility constraints induced by the regulatory boundary function. The selected action $\pi^{\ast}$ is therefore the highest-scoring candidate under both semantic coherence and task-level optimization. This stage is distinct from interpretive resolution because it addresses what should be done, rather than what the current evidence could mean.
+The deterministic Match \& Select rule is then
+\[
+\pi^{\ast} = \arg\max_{a_j \in A} \; \mathcal{Q}(a_j \mid x^{\ast}, G, \mathcal{C}),
+\]
+which is equivalent to choosing the maximum-weight action when the action-field prior is uniform and the weights are proportional to the action scores. More generally, the prior action weights $|b_j|^2$ are combined with these scores before normalization. If no action is sufficiently supported or admissible, the system may defer commitment, seek additional information, or retain the updated action distribution.
 
 \subsection{Linguistic Response Generation}
 
-Once the action state stabilizes, the dominant cognitive state is transferred to a Linguistic Response Module. This module converts the selected interpretation and action into a language response that is consistent with both the memory state and the task objective. The response process is recursive and self-monitoring, but it does not create a further superposed semantic stage. Instead, generation is a realization of an already selected cognitive state.
+Once the action state stabilizes, the selected interpretation-action pair is transferred to a Linguistic Response Module. This module converts the selected states into a language response that is consistent with both the memory state and the task objective. The response process is recursive and self-monitoring, but it does not create a third superposed semantic stage. Instead, generation is a realization of already selected cognitive and action states.
 
 The response process begins by parsing the task instruction or question into communicative intent, then extracts the core semantic content that the system intends to convey. The selected content is then mapped onto a linguistic frame, revised for discourse relevance, and checked against the original instruction or question. If a mismatch is detected, the system re-enters the topological memory field, backtracks to the relevant candidate set, and modifies the response accordingly.
 
@@ -287,9 +312,9 @@ Inference in CCA proceeds in iterative cycles. At each cycle, the architecture p
 5. Compute the total energy and update candidate positions and optional phase-based coherence.
 6. Form or update the interpretive candidate distribution using experience, knowledge, and contextual evidence.
 7. Apply the evidence-conditioned update and commit to an interpretation when the evidence is sufficient; otherwise retain the updated distribution.
-8. Pass the selected interpretation to the goal module.
-9. Apply goal-conditioned Match \& Select over candidate actions under regulatory and task constraints.
-10. Convert the selected state into a natural language utterance using the Linguistic Response Module.
+8. Construct or update a second candidate distribution over actions conditioned on the selected interpretation.
+9. Apply goal- and constraint-conditioned action updating and commit to an action when support is sufficient; otherwise retain the action distribution or seek further information.
+10. Convert the selected interpretation-action pair into a natural language utterance using the Linguistic Response Module.
 11. Re-evaluate the generated utterance by feeding it back into the same analytic loop and revise it if discourse alignment is insufficient.
 
 The continuous relaxation component can be expressed as
@@ -299,15 +324,15 @@ X^{(t+1)} = X^{(t)} - \eta \nabla_X E(X^{(t)},\Theta^{(t)}),
 \[
 \Theta^{(t+1)} = \Theta^{(t)} + \tau \,\mathcal{S}(\Theta^{(t)},\Gamma),
 \]
-where $\mathcal{S}$ denotes the optional phase-based coherence update. The evidence-conditioned candidate update and commitment follow these relaxation steps and are distinct from them. The process terminates when the candidate distribution and selected interpretation stabilize, the energy decrease falls below a threshold, or additional evidence is required.
+where $\mathcal{S}$ denotes the optional phase-based coherence update. The interpretive evidence update and collapse follow the candidate-relaxation steps; the goal-conditioned action update and collapse follow interpretation selection. These are two distinct resolution operations over different candidate sets. The process terminates when the candidate distributions and selected interpretation-action pair stabilize, the energy decrease falls below a threshold, or additional evidence is required.
 
 The key property is that the architecture is not a strictly feedforward pipeline. The reasoning loop is bidirectional: the system can move from observation to candidate interpretation, from interpretation to goal-conditioned action selection, and then from action to generated utterance, while retaining the ability to backtrack when the generated output fails to satisfy the original task objective.
 
 \subsection{Comparison with Classical Production Rule Matching}
 
-Classical ACT-R-like architectures treat reasoning as a largely implicit symbolic operation: working memory is compared against production conditions, and a single production is selected according to activation and utility. In CCA, candidate interpretations are first maintained as a weighted field and then updated and resolved using contextual evidence. A subsequent goal-conditioned Match \& Select process chooses among candidate actions.
+Classical ACT-R-like architectures treat reasoning as a largely implicit symbolic operation: working memory is compared against production conditions, and a single production is selected according to activation and utility. In CCA, this process is described in two candidate-resolution stages. First, the architecture maintains a weighted field over candidate interpretations and updates it with contextual evidence. Second, it maintains a weighted field over candidate actions and updates it with goal relevance and admissibility constraints. Each field is resolved separately, and language generation follows the selected interpretation-action pair.
 
-The first difference is therefore sensory grounding. CCA does not assume that symbolic rules are applied to already-structured memory; it assumes that perception itself is the starting point of interpretation. The second difference is that the interpretive update is explicitly conditioned on evidence and context, while action selection is explicitly conditioned on the task goal and admissibility constraints. Consequently, CCA reframes cognition as a distributed process of perceptual grounding, topological inference, evidence-conditioned interpretation, goal-sensitive action selection, and generative response refinement rather than as a sequence of discrete production firing events.
+The first difference is therefore sensory grounding. CCA does not assume that symbolic rules are applied to already-structured memory; it assumes that perception itself is the starting point of interpretation. The second difference is that both interpretation and action resolution are explicitly conditioned on their relevant evidence: context for interpretation and task goals and constraints for action. Consequently, CCA reframes cognition as a distributed process of perceptual grounding, topological inference, two-stage candidate resolution, and generative response refinement rather than as a sequence of discrete production firing events.
 
 \section{Implementation \& Complexity}
 
@@ -323,12 +348,12 @@ A minimal implementation can be organized as follows:
     \item Edge weights: semantic compatibility, co-occurrence frequency, or learned affinity.
     \item State update: iterative gradient descent over the total energy $E(X,\Theta)$.
     \item Optional coherence update: phase-based compatibility adjustment over neighboring nodes.
-    \item Interpretation selection: evidence-conditioned update of the candidate distribution followed by commitment when confidence is sufficient.
-    \item Goal-conditioned action selection: Match \& Select over candidate trajectories under regulatory and task constraints.
-    \item Response: generation of natural language from the stabilized cognitive state using the five-stage schema, followed by post-output adequacy checking and revision.
+    \item Interpretation selection: evidence-conditioned update of the interpretive candidate distribution followed by commitment when confidence is sufficient.
+    \item Goal-conditioned action selection: construct and update a second action candidate distribution, then commit under task and regulatory constraints.
+    \item Response: generation of natural language from the stabilized interpretation-action pair using the five-stage schema, followed by post-output adequacy checking and revision.
 \end{itemize}
 
-This design admits a direct computational interpretation. The topological field is a weighted graph $G=(V,E)$ with $|V|=n$ active memory elements and $|E|=m$ relations. Each node stores a latent representation, category label, and activation state, while edges encode compatibility and contextual affinity. Inference and selection then proceed over this graph using relaxation dynamics, optional coherence adjustment, evidence-conditioned interpretation, and goal-conditioned action selection.
+This design admits a direct computational interpretation. The topological field is a weighted graph $G=(V,E)$ with $|V|=n$ active memory elements and $|E|=m$ relations. Each node stores a latent representation, category label, and activation state, while edges encode compatibility and contextual affinity. Inference and selection then proceed over this graph using relaxation dynamics, optional coherence adjustment, evidence-conditioned interpretive resolution, and goal-conditioned action resolution.
 
 \subsection{Expected Computational Complexity}
 
@@ -352,20 +377,20 @@ The optional phase-based coherence update similarly costs
 \[
 O(m)
 \]
-per iteration. Updating and normalizing the evidence-weighted candidate distribution costs $O(n)$ once candidate likelihoods are available. Therefore the total complexity over $T$ iterations is approximately
+per iteration. Updating and normalizing the evidence-weighted interpretation distribution costs $O(n)$ once candidate likelihoods are available. Updating and normalizing the action distribution costs $O(k)$ for $k$ candidate actions. Therefore the total complexity over $T$ relaxation iterations is approximately
 \[
-O\bigl(T(m + n d) + n\bigr)
+O\bigl(T(m + n d) + n + k\bigr)
 \]
 for sparse implementations and
 \[
-O\bigl(T n^2 d + n\bigr)
+O\bigl(T n^2 d + n + k\bigr)
 \]
-in the fully connected case. Memory usage is linear in the size of the graph and latent representation:
+in the fully connected case. Memory usage is linear in the size of the graph and latent representation, with an additional $O(k)$ storage for action candidates:
 \[
-O(n d + m).
+O(n d + m + k).
 \]
 
-This analysis shows that CCA is computationally feasible in sparse or locally connected regimes, while dense topological fields can become expensive as the number of candidate states grows. The additional decision layer remains tractable as long as the action candidate set remains moderate relative to the graph size.
+This analysis shows that CCA is computationally feasible in sparse or locally connected regimes, while dense topological fields can become expensive as the number of candidate states grows. The two decision stages remain tractable as long as the interpretation and action candidate sets remain moderate relative to the graph size.
 
 \subsection{Future Directions}
 
@@ -387,7 +412,7 @@ For each task, we measured:
 \begin{itemize}
     \item retrieval accuracy;
     \item convergence time, defined as the number of relaxation steps until the energy curve stabilized;
-    \item candidate-distribution concentration and stability after evidence updates;
+    \item concentration and stability of the interpretive and action candidate distributions after evidence updates;
     \item robustness under noise, defined as accuracy degradation under increasing corruption or distractor density;
     \item action-selection accuracy, defined as the probability of choosing the goal-compatible action under ambiguity;
     \item response quality under conversational settings, measured by semantic consistency between the inferred state and the generated output;
@@ -398,32 +423,32 @@ For each task, we measured:
 
 The first evaluation examines whether the architecture can resolve ambiguous memory states in which multiple candidate interpretations share similar symbolic or perceptual features. In these tasks, the system must distinguish semantically related but contextually irrelevant states before selecting a response or action.
 
-CCA achieved substantially higher retrieval accuracy than the baseline models, particularly when distractors were conceptually close but contextually irrelevant. This improvement arises because candidate interpretations are retained until contextual evidence is evaluated; the evidence update increases the relative support of compatible candidates and suppresses contextually irrelevant ones before action selection occurs.
+CCA achieved substantially higher retrieval accuracy than the baseline models, particularly when distractors were conceptually close but contextually irrelevant. This improvement arises because candidate interpretations are retained until contextual evidence is evaluated; the evidence update increases the relative support of compatible candidates and suppresses contextually irrelevant ones before the first collapse and subsequent action selection.
 
 \subsection{Ablation Study}
 
 To test the contribution of each mechanism, we evaluated several ablated variants:
 \begin{itemize}
     \item without phase-based coherence adjustment;
-    \item without evidence-conditioned candidate updating and collapse;
+    \item without evidence-conditioned interpretive updating and collapse;
+    \item without goal-conditioned action updating and collapse;
     \item without error-driven topological deformation;
     \item without category-conditioned mapping $F(\cdot)$;
-    \item without goal-conditioned Match \& Select;
     \item without the Linguistic Response Module;
     \item without the post-output adequacy check and revision loop.
 \end{itemize}
 
-The full model consistently outperformed all ablations. Removing phase-based coherence adjustment reduced retrieval robustness in the presence of competing candidates, while removing the evidence-conditioned update reduced the system's ability to resolve context-sensitive ambiguity. Removing the goal-conditioned selection mechanism led to poorer action choices under ambiguity. Removing the response module degraded language grounding and discourse consistency, while removing the revision loop reduced alignment with the original task objective.
+The full model consistently outperformed all ablations. Removing phase-based coherence adjustment reduced retrieval robustness in the presence of competing candidates, while removing the interpretive evidence update reduced the system's ability to resolve context-sensitive ambiguity. Removing the action-level update led to poorer goal-compatible action choices. Removing the response module degraded language grounding and discourse consistency, while removing the revision loop reduced alignment with the original task objective.
 
 \subsection{Convergence and Stability}
 
-A second set of experiments measured convergence behavior over repeated retrieval cycles. We tracked the decay of the total energy $E(X,\Theta)$, the concentration and stability of the candidate distribution, and the stability of the goal-conditioned action choice over repeated iterations.
+A second set of experiments measured convergence behavior over repeated retrieval cycles. We tracked the decay of the total energy $E(X,\Theta)$, the concentration and stability of the interpretive and action candidate distributions, and the stability of the selected interpretation-action pair over repeated iterations.
 
-The full architecture converged reliably in tasks involving moderate semantic ambiguity, while the ablated variants exhibited slower stabilization or more frequent oscillation between competing candidate states. These results suggest that topological relaxation, contextual evidence updates, and goal-constrained selection jointly support robust inference.
+The full architecture converged reliably in tasks involving moderate semantic ambiguity, while the ablated variants exhibited slower stabilization or more frequent oscillation between competing candidate states. These results suggest that topological relaxation, contextual evidence updates, and goal-constrained action resolution jointly support robust inference.
 
 \subsection{Summary of Findings}
 
-Overall, the evaluation demonstrates that CCA improves retrieval, action selection, and response generation in semantically complex environments by explicitly modeling memory as a structured, dynamic field rather than as a flat symbolic store. The architecture separates an evidence-conditioned update over candidate interpretations from goal-conditioned action selection, allowing ambiguity to be represented before commitment without treating actions as a second quantum-like superposition.
+Overall, the evaluation demonstrates that CCA improves retrieval, action selection, and response generation in semantically complex environments by explicitly modeling memory as a structured, dynamic field rather than as a flat symbolic store. The two-stage superposition-and-collapse design separates evidence-conditioned resolution of interpretations from goal-conditioned resolution of actions, allowing ambiguity to be represented before commitment at both stages.
 
 \section{Discussion}
 
@@ -431,17 +456,17 @@ CCA should be interpreted as a non-linear reformulation of cognitive control rat
 
 This shift has several conceptual advantages. First, it makes memory retrieval explainable in geometric terms: candidate states are evaluated according to their position, compatibility, and coherence. Second, it distinguishes between interpretive ambiguity and action-level ambiguity, which are often conflated in standard production systems. Third, it integrates language generation with the same memory and control loop that supports action selection, thereby reducing the gap between internal deliberation and external communication.
 
-At the same time, the framework should be understood as a theoretical abstraction rather than a literal physical theory of quantum cognition. The possibility-based candidate representation and wave-packet-collapse terminology are computational analogies for retaining alternatives, updating them with evidence, and committing to a selected interpretation. Phase variables, when used, provide an auxiliary coherence signal. None of these terms asserts literal wave functions, quantum measurement, or entanglement in the brain.
+At the same time, the framework should be understood as a theoretical abstraction rather than a literal physical theory of quantum cognition. The possibility-based candidate representations and wave-packet-collapse terminology are computational analogies for retaining alternatives, updating them with evidence or goals, and committing to selected candidates at two distinct stages. Phase variables, when used, provide an auxiliary coherence signal. None of these terms asserts literal wave functions, quantum measurement, or entanglement in the brain.
 
-The limitations of the current formulation are also important. The model is presented at the conceptual and mathematical level, but it does not yet provide large-scale empirical validation across benchmark datasets or direct comparison against modern graph-based reasoning systems. Future work will need to establish whether the evidence-conditioned candidate update and selection model remains stable under larger and noisier task settings.
+The limitations of the current formulation are also important. The model is presented at the conceptual and mathematical level, but it does not yet provide large-scale empirical validation across benchmark datasets or direct comparison against modern graph-based reasoning systems. Future work will need to establish whether the two-stage candidate-update and collapse model remains stable under larger and noisier task settings.
 
 \section{Conclusion}
 
-This paper introduced the Conscious Cognitive Architecture (CCA), a multimodal non-linear cognitive architecture that reformulates reasoning as a sensory-to-topological-to-interpretive-resolution-to-action-to-linguistic process. Rather than treating cognition as a single symbolic Match \& Select cycle, CCA separates interpretation from action selection: it maintains a weighted field over quantized candidate interpretations, updates that field using contextual evidence, commits to a selected interpretation, and then applies goal-conditioned Match \& Select to actions.
+This paper introduced the Conscious Cognitive Architecture (CCA), a multimodal non-linear cognitive architecture that reformulates reasoning as a sensory-to-topological-to-interpretive-resolution-to-action-resolution-to-linguistic process. Rather than treating cognition as a single symbolic Match \& Select cycle, CCA separates interpretation from action selection and models both as sequential candidate-resolution stages: it maintains a weighted field over quantized candidate interpretations, updates and collapses that field using contextual evidence, then maintains a second weighted field over actions and collapses it using task goals and admissibility constraints.
 
-The key contribution is therefore conceptual as well as formal: memory is treated not as a flat symbolic store but as a structured, relational field in which sensory evidence, category organization, and task constraints jointly determine the most coherent interpretation. The architecture distinguishes semantic uncertainty from goal-sensitive action selection. Its wave-packet-collapse terminology describes computational evidence-conditioned commitment, not a physical quantum process. Language generation is treated as a grounded realization of the stabilized state rather than as an independent or additional superposed inference stage.
+The key contribution is therefore conceptual as well as formal: memory is treated not as a flat symbolic store but as a structured, relational field in which sensory evidence, category organization, and task constraints jointly determine the most coherent interpretation and action. The architecture distinguishes semantic uncertainty from goal-sensitive action selection. Its wave-packet-collapse terminology describes computational evidence-conditioned commitment at both stages, not physical quantum processes. Language generation is treated as a grounded realization of the stabilized interpretation-action pair rather than as an independent or additional superposed inference stage.
 
-Future work will focus on empirical evaluation, sparse graph implementations, and hybrid symbolic-neural extensions that preserve interpretability while improving scalability. By grounding reasoning in a topological memory field and separating evidence-conditioned interpretation from goal-conditioned action choice, CCA provides a coherent alternative to purely discrete production architectures.
+Future work will focus on empirical evaluation, sparse graph implementations, and hybrid symbolic-neural extensions that preserve interpretability while improving scalability. By grounding reasoning in a topological memory field and separating interpretive uncertainty from goal-conditioned action choice, CCA provides a coherent alternative to purely discrete production architectures.
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}
